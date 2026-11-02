@@ -1,446 +1,289 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>70 Orações Poderosas — Comunhão Diária com Deus</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>App 70 Orações Poderosas — Comunhão Diária com Deus</title>
 
-  <!-- Metatags para prévia com imagem e texto no WhatsApp / Redes Sociais -->
+  <!-- Tags para WhatsApp e Redes Sociais -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="70 Orações Poderosas — Comunhão Diária com Deus" />
-  <meta property="og:description" content="Ouça e pratique orações diárias com narração em voz serena e fundo musical instrumental de adoração. Experimente grátis!" />
+  <meta property="og:title" content="App 70 Orações Poderosas — Comunhão Diária com Deus" />
+  <meta property="og:description" content="Ouça orações guiadas com narração suave e fundo instrumental devocional. Experimente grátis!" />
   <meta property="og:image" content="https://images.unsplash.com/photo-1507692049790-de58290a4334?w=1200&auto=format&fit=crop&q=80" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta name="theme-color" content="#1e1b4b" />
-
-  <!-- Estilos e Fontes -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta property="og:url" content="https://tutoriaedicas7-a11y.github.io/70-ora-es-todososmomentos/" />
 
   <style>
     :root {
-      --bg: #0b0f19;
-      --card-bg: rgba(26, 32, 53, 0.85);
-      --card-border: rgba(212, 175, 55, 0.25);
-      --gold-primary: #d4af37;
-      --gold-light: #fef3c7;
-      --text-main: #f8fafc;
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --primary: #d97706;
+      --primary-hover: #b45309;
+      --text: #f8fafc;
       --text-muted: #94a3b8;
-      --primary-accent: #4338ca;
-      --vip-badge: #eab308;
+      --border: #334155;
     }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      -webkit-tap-highlight-color: transparent;
-      user-select: none;
-    }
-
-    body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      background: radial-gradient(circle at top, #1e1b4b 0%, #0b0f19 100%);
-      color: var(--text-main);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      padding-bottom: 90px;
-    }
-
-    header {
-      padding: 24px 20px 16px;
-      text-align: center;
-      background: rgba(11, 15, 25, 0.9);
-      backdrop-filter: blur(10px);
-      position: sticky;
-      top: 0;
-      z-index: 40;
-      border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-    }
-
-    header h1 {
-      font-family: 'Cinzel', serif;
-      font-size: 1.45rem;
-      color: var(--gold-primary);
-      letter-spacing: 0.5px;
-      margin-bottom: 4px;
-    }
-
-    header p {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-
-    .badge-status {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 4px 12px;
-      border-radius: 999px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      margin-top: 8px;
-    }
-
-    .badge-free {
-      background: rgba(148, 163, 184, 0.15);
-      color: #cbd5e1;
-      border: 1px solid rgba(148, 163, 184, 0.3);
-    }
-
-    .badge-vip {
-      background: rgba(234, 179, 8, 0.18);
-      color: #fde047;
-      border: 1px solid #eab308;
-    }
-
-    /* Categorias */
-    .filter-bar {
-      display: flex;
-      gap: 8px;
-      overflow-x: auto;
-      padding: 12px 20px;
-      scrollbar-width: none;
-    }
-    .filter-bar::-webkit-scrollbar { display: none; }
-
-    .filter-btn {
-      white-space: nowrap;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      color: var(--text-muted);
-      padding: 7px 14px;
-      border-radius: 20px;
-      font-size: 0.8rem;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-
-    .filter-btn.active {
-      background: var(--gold-primary);
-      color: #0b0f19;
-      font-weight: 700;
-      border-color: var(--gold-primary);
-    }
-
-    /* Lista de Orações */
-    .container {
-      max-width: 600px;
-      width: 100%;
-      margin: 0 auto;
-      padding: 8px 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .card {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 14px;
-      padding: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      cursor: pointer;
-      transition: transform 0.15s, border-color 0.2s;
-    }
-
-    .card:active {
-      transform: scale(0.98);
-    }
-
-    .card-left {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      flex: 1;
-      min-width: 0;
-    }
-
-    .card-number {
-      width: 38px;
-      height: 38px;
-      border-radius: 10px;
-      background: rgba(212, 175, 55, 0.12);
-      color: var(--gold-primary);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 0.9rem;
-      flex-shrink: 0;
-    }
-
-    .card-info h3 {
-      font-size: 0.98rem;
-      font-weight: 600;
-      color: #fff;
-      margin-bottom: 2px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .card-info span {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-    }
-
-    .card-tag {
-      font-size: 0.72rem;
-      font-weight: 600;
-      padding: 3px 8px;
-      border-radius: 6px;
-      display: inline-block;
-    }
-
-    .tag-free {
-      background: rgba(34, 197, 94, 0.15);
-      color: #4ade80;
-    }
-
-    .tag-locked {
-      background: rgba(239, 68, 68, 0.15);
-      color: #f87171;
-    }
-
-    /* Modal de Leitura / Oração */
-    .modal {
-      position: fixed;
-      inset: 0;
-      background: rgba(7, 10, 19, 0.95);
-      backdrop-filter: blur(12px);
-      z-index: 100;
-      display: none;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 24px 20px;
-    }
-
-    .modal.active {
-      display: flex;
-    }
-
-    .modal-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      padding-bottom: 12px;
-    }
-
-    .modal-header h2 {
-      font-family: 'Cinzel', serif;
-      font-size: 1.15rem;
-      color: var(--gold-primary);
-      max-width: 80%;
-    }
-
-    .btn-close {
-      background: none;
-      border: none;
-      color: #94a3b8;
-      font-size: 1.6rem;
-      cursor: pointer;
-    }
-
-    .modal-body {
-      flex: 1;
-      overflow-y: auto;
-      padding: 24px 8px;
-      font-size: 1.15rem;
-      line-height: 1.85;
-      color: #f1f5f9;
-      text-align: justify;
-      user-select: text;
-    }
-
-    .modal-body p {
-      margin-bottom: 16px;
-    }
-
-    .modal-footer {
-      background: rgba(26, 32, 53, 0.9);
-      border: 1px solid var(--card-border);
-      border-radius: 16px;
-      padding: 14px 18px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-    }
-
-    .audio-controls {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .btn-play {
-      background: var(--gold-primary);
-      border: none;
-      color: #0b0f19;
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      font-size: 1.3rem;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-    }
-
-    .audio-text {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-
-    .audio-text b {
-      display: block;
-      color: #fff;
-      font-size: 0.85rem;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    body { background-color: var(--bg); color: var(--text); padding-bottom: 90px; }
+    header { background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%); padding: 26px 20px; text-align: center; border-bottom: 1px solid var(--border); }
+    header h1 { font-size: 1.45rem; color: #fbbf24; margin-bottom: 6px; }
+    header p { font-size: 0.9rem; color: var(--text-muted); }
+    .status-badge { display: inline-block; margin-top: 10px; padding: 4px 12px; border-radius: 9999px; font-size: 0.78rem; font-weight: 600; background: #065f46; color: #6ee7b7; }
+    .container { max-width: 600px; margin: 0 auto; padding: 16px; }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+    .prayer-card { background-color: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
+    .prayer-card:active { opacity: 0.8; }
+    .prayer-card.locked { opacity: 0.8; border-color: rgba(234, 179, 8, 0.4); }
+    .prayer-info h3 { font-size: 0.98rem; margin-bottom: 4px; color: #fff; }
+    .prayer-info span { font-size: 0.8rem; color: var(--text-muted); }
+    .prayer-tag { padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; font-weight: bold; }
+    .tag-free { background: #065f46; color: #a7f3d0; }
+    .tag-vip { background: #78350f; color: #fde68a; }
+    
+    /* Modal de Leitura e Player */
+    .modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85); backdrop-filter: blur(5px); z-index: 100; justify-content: center; align-items: flex-end; }
+    .modal.active { display: flex; }
+    .modal-content { background: var(--card-bg); width: 100%; max-width: 600px; max-height: 85vh; border-radius: 20px 20px 0 0; padding: 24px; overflow-y: auto; border: 1px solid var(--border); box-shadow: 0 -10px 30px rgba(0,0,0,0.6); }
+    .modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; border-bottom: 1px solid var(--border); padding-bottom: 12px; }
+    .modal-title { font-size: 1.2rem; color: #fbbf24; }
+    .close-btn { background: none; border: none; color: var(--text-muted); font-size: 1.8rem; cursor: pointer; line-height: 1; }
+    .audio-player-box { background: #0f172a; padding: 16px; border-radius: 12px; margin-bottom: 18px; text-align: center; border: 1px solid var(--border); }
+    .btn-audio { background: var(--primary); color: white; border: none; padding: 12px 24px; border-radius: 30px; font-weight: bold; cursor: pointer; font-size: 0.95rem; }
+    .prayer-body { font-size: 1.1rem; line-height: 1.8; color: #e2e8f0; margin-bottom: 24px; }
+    
     /* Bloqueio VIP / Paywall */
-    .paywall-modal {
-      position: fixed;
-      inset: 0;
-      background: rgba(11, 15, 25, 0.98);
-      z-index: 110;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
-    }
-
-    .paywall-modal.active {
-      display: flex;
-    }
-
-    .paywall-card {
-      background: radial-gradient(circle at top, #2e1065 0%, #1e1b4b 100%);
-      border: 2px solid var(--gold-primary);
-      border-radius: 20px;
-      padding: 30px 22px;
-      max-width: 440px;
-      width: 100%;
-      text-align: center;
-      position: relative;
-    }
-
-    .paywall-card h2 {
-      font-family: 'Cinzel', serif;
-      color: var(--gold-primary);
-      font-size: 1.4rem;
-      margin-bottom: 10px;
-    }
-
-    .paywall-card p {
-      font-size: 0.92rem;
-      color: #e2e8f0;
-      line-height: 1.5;
-      margin-bottom: 18px;
-    }
-
-    .price-box {
-      background: rgba(0, 0, 0, 0.35);
-      border-radius: 12px;
-      padding: 14px;
-      margin-bottom: 20px;
-    }
-
-    .price-box span {
-      display: block;
-      font-size: 0.8rem;
-      color: #cbd5e1;
-    }
-
-    .price-box strong {
-      font-size: 1.8rem;
-      color: #38bdf8;
-    }
-
-    .btn-buy {
-      display: block;
-      width: 100%;
-      background: linear-gradient(135deg, #eab308 0%, #ca8a04 100%);
-      color: #0b0f19;
-      font-weight: 700;
-      text-decoration: none;
-      padding: 15px;
-      border-radius: 12px;
-      font-size: 1.05rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      box-shadow: 0 4px 15px rgba(234, 179, 8, 0.4);
-      margin-bottom: 14px;
-    }
-
-    .btn-unlock-key {
-      background: transparent;
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      color: #94a3b8;
-      font-size: 0.82rem;
-      padding: 8px 14px;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    /* Barra de Navegação Inferior */
-    nav.bottom-nav {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 70px;
-      background: rgba(11, 15, 25, 0.95);
-      backdrop-filter: blur(12px);
-      border-top: 1px solid rgba(212, 175, 55, 0.2);
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      z-index: 50;
-    }
-
-    .nav-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 4px;
-      color: var(--text-muted);
-      font-size: 0.75rem;
-      cursor: pointer;
-      background: none;
-      border: none;
-    }
-
-    .nav-item.active {
-      color: var(--gold-primary);
-      font-weight: 600;
-    }
-
-    .nav-item svg {
-      width: 22px;
-      height: 22px;
-      fill: currentColor;
-    }
+    .lock-box { text-align: center; padding: 20px 10px; }
+    .lock-box h3 { color: #fbbf24; margin-bottom: 12px; font-size: 1.3rem; }
+    .lock-box p { color: var(--text-muted); margin-bottom: 20px; font-size: 0.95rem; line-height: 1.6; }
+    .btn-buy { display: block; width: 100%; background: #16a34a; color: white; text-decoration: none; padding: 15px; border-radius: 10px; font-weight: bold; font-size: 1.05rem; margin-bottom: 14px; text-align: center; }
+    
+    /* Ajustes & Chave */
+    .settings-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 16px; }
+    .input-key { width: 100%; padding: 14px; background: #0f172a; border: 1px solid var(--border); border-radius: 8px; color: white; font-size: 1rem; text-transform: uppercase; margin-bottom: 12px; }
+    .btn-submit { width: 100%; background: var(--primary); color: white; border: none; padding: 14px; border-radius: 8px; font-weight: bold; font-size: 1rem; cursor: pointer; }
+    
+    /* Menu Inferior Fixo */
+    nav { position: fixed; bottom: 0; left: 0; width: 100%; background: #1e293b; border-top: 1px solid var(--border); display: flex; justify-content: space-around; padding: 12px 0; z-index: 50; }
+    .nav-item { background: none; border: none; color: var(--text-muted); font-size: 0.85rem; display: flex; flex-direction: column; align-items: center; gap: 4px; cursor: pointer; }
+    .nav-item.active { color: #fbbf24; font-weight: bold; }
   </style>
 </head>
 <body>
 
   <header>
     <h1>70 Orações Poderosas</h1>
-    <p>Comunhão Diária com Deus</p>
-    <div id="statusBadge" class="badge-status badge-free">Degustação: 7 Orações Liberadas</div>
+    <p>Comunhão Diária com Deus &bull; Narração e Paz Interior</p>
+    <div id="userBadge" class="status-badge">Acesso Gratuito (7 Orações)</div>
   </header>
 
-  <!-- Filtro de Categorias -->
-  <div class="filter-bar">
-    <button class="filter-btn active" onclick="filtrar('todas')">Todas (70)</button>
-    <button class="filter-btn" onclick="filtrar('Gratidão e Manhã')">Manhã & Gratidão</button>
-    <button class="filter-btn" onclick="filtrar('Proteção e Batalha')">Proteção & Batalha</
+  <div class="container">
+    <!-- Lista de Orações -->
+    <div id="tabPrayers" class="tab-content active">
+      <div id="prayersList"></div>
+    </div>
+
+    <!-- Ajustes / Chave VIP -->
+    <div id="tabSettings" class="tab-content">
+      <div class="settings-card">
+        <h3 style="margin-bottom: 8px; color: #fbbf24;">🔑 Desbloqueio de Assinante</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 16px;">
+          Se você assinou na Kiwify, digite a sua Chave VIP para liberar as 70 orações:
+        </p>
+        <input type="text" id="vipKeyInput" class="input-key" placeholder="DIGITE SUA CHAVE VIP (EX: ORACAO2026)" />
+        <button class="btn-submit" onclick="unlockVip()">Ativar Acesso Completo</button>
+      </div>
+
+      <div class="settings-card" style="text-align: center;">
+        <h3 style="margin-bottom: 8px; color: #fbbf24;">Quer ouvir as 70 Orações?</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 16px;">
+          Desbloqueie agora a narração contínua e todo o acervo devocional por apenas R$ 19,90/mês.
+        </p>
+        <a href="https://pay.kiwify.com.br/ONEdsD6" target="_blank" class="btn-buy" style="margin-bottom: 0;">Assinar Acesso VIP</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Exibição -->
+  <div id="prayerModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modalTitle" class="modal-title">Título</h2>
+        <button class="close-btn" onclick="closeModal()">&times;</button>
+      </div>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- Navegação Inferior -->
+  <nav>
+    <button class="nav-item active" id="btnNavPrayers" onclick="switchTab('prayers')">
+      <span style="font-size: 1.2rem;">📖</span> Orações
+    </button>
+    <button class="nav-item" id="btnNavSettings" onclick="switchTab('settings')">
+      <span style="font-size: 1.2rem;">⚙️</span> Ajustes & VIP
+    </button>
+  </nav>
+
+  <script>
+    const PRAYERS_DATA = [
+      { id: 1, title: "1. Oração da Manhã e Entrega do Dia", category: "Paz & Direção", text: "Senhor Deus, Pai de infinita bondade, consagro a Ti as primeiras horas deste dia. Que os meus passos sejam guiados pela Tua sabedoria, que as minhas palavras transmitam amor e que o meu coração encontre repouso sob a Tua proteção. Afasta todo o medo e renova a minha fé nesta jornada. Em nome de Jesus, Amém." },
+      { id: 2, title: "2. Oração por Paz de Espírito e Alívio da Ansiedade", category: "Cura Interior", text: "Pai Amado, quando as preocupações do mundo pesarem sobre os meus ombros, acalma os meus pensamentos. Derrama sobre a minha mente aquela paz serena que excede todo o entendimento humano. Guarda o meu coração contra as aflições e ajuda-me a descansar na certeza de que Tu estás cuidando de tudo. Amém." },
+      { id: 3, title: "3. Oração de Blindagem e Proteção do Lar", category: "Família", text: "Senhor, coloco as paredes e os alicerces da minha casa debaixo das Tuas asas protetoras. Que os Teus anjos acampem ao redor da minha família, repreendendo toda discórdia, enfermidade ou investida do mal. Reina sobre este lar com harmonia, respeito e abundante comunhão. Amém." },
+      { id: 4, title: "4. Oração por Provisão e Portas Abertas no Trabalho", category: "Trabalho", text: "Deus Todo-Poderoso, Tu és o meu verdadeiro sustentador. Abre portas de prosperidade digna, capacita as minhas mãos para o trabalho e abençoa o fruto do meu esforço. Que jamais falte o pão sobre a minha mesa e que a Tua generosidade se manifeste em cada projeto. Amém." },
+      { id: 5, title: "5. Oração para Cura Física e Restauração", category: "Saúde", text: "Senhor Jesus, Médico dos médicos, visita agora cada célula do meu corpo. Leva embora as dores, alivia o cansaço e renova as minhas energias vitais. Restaura a saúde dos meus ossos, músculos e órgãos para que eu possa continuar glorificando Teu santo nome. Amém." },
+      { id: 6, title: "6. Oração por Sabedoria e Discernimento nas Decisões", category: "Sabedoria", text: "Pai Celestial, dá-me clareza e bom discernimento antes de cada escolha. Que as minhas decisões não sejam tomadas pela pressa ou pela emoção, mas sim alinhadas à Tua vontade soberana. Ilumina o meu caminho e concede-me sabedoria divina. Amém." },
+      { id: 7, title: "7. Oração da Noite e Sono Reparador", category: "Descanso", text: "Pai Amado, ao fechar dos olhos no término deste dia, entrego em Tuas mãos todas as lutas e tarefas que vivi. Desfaço-me do cansaço mental e das preocupações. Envia um descanso profundo e reparador para o meu espírito, guardando o meu sono durante toda a noite. Amém." }
+    ];
+
+    for (let i = 8; i <= 70; i++) {
+      PRAYERS_DATA.push({
+        id: i,
+        title: i + ". Oração de Fortalecimento Espiritual #" + i,
+        category: "Edificação",
+        text: "Pai Eterno, que a Tua mão poderosa sustente a minha vida neste dia. Derrama Tua paz, ilumina as minhas decisões e renova as minhas forças para vencer todos os obstáculos com fé e mansidão. Em nome de Jesus, Amém."
+      });
+    }
+
+    let isVip = localStorage.getItem("oracao_vip_active") === "true";
+    let isSpeaking = false;
+    let synth = window.speechSynthesis;
+    let currentPrayerText = "";
+
+    function renderPrayers() {
+      const list = document.getElementById("prayersList");
+      list.innerHTML = "";
+      
+      PRAYERS_DATA.forEach(p => {
+        const isFree = p.id <= 7;
+        const accessible = isFree || isVip;
+        
+        const card = document.createElement("div");
+        card.className = "prayer-card" + (!accessible ? " locked" : "");
+        card.onclick = function() { openPrayer(p.id); };
+        
+        card.innerHTML = `
+          <div class="prayer-info">
+            <h3>${p.title}</h3>
+            <span>${p.category}</span>
+          </div>
+          <div>
+            ${accessible 
+              ? `<span class="prayer-tag ${isFree ? 'tag-free' : 'tag-vip'}">${isVip && !isFree ? 'VIP' : 'OUVIR'}</span>`
+              : `<span class="prayer-tag tag-vip">🔒 VIP</span>`
+            }
+          </div>
+        `;
+        list.appendChild(card);
+      });
+
+      const badge = document.getElementById("userBadge");
+      if (isVip) {
+        badge.innerText = "✨ Assinante VIP Liberado";
+        badge.style.background = "#78350f";
+        badge.style.color = "#fde68a";
+      } else {
+        badge.innerText = "Acesso Gratuito (7 Orações)";
+        badge.style.background = "#065f46";
+        badge.style.color = "#6ee7b7";
+      }
+    }
+
+    function openPrayer(id) {
+      const prayer = PRAYERS_DATA.find(p => p.id === id);
+      if (!prayer) return;
+
+      const isFree = id <= 7;
+      const modal = document.getElementById("prayerModal");
+      const title = document.getElementById("modalTitle");
+      const content = document.getElementById("modalContent");
+
+      title.innerText = prayer.title;
+      currentPrayerText = prayer.text;
+
+      if (!isFree && !isVip) {
+        content.innerHTML = `
+          <div class="lock-box">
+            <h3>🔒 Conteúdo Exclusivo para Assinantes</h3>
+            <p>Você concluiu as 7 orações gratuitas de degustação! Assine agora para desbloquear o acervo completo das 70 orações com áudio narrado e música devocional.</p>
+            <a href="https://pay.kiwify.com.br/ONEdsD6" target="_blank" class="btn-buy">Desbloquear por R$ 19,90/mês</a>
+            <p style="font-size: 0.85rem; margin-top: 10px;">Já é assinante? Clique no menu <strong>Ajustes & VIP</strong> e digite sua Chave.</p>
+          </div>
+        `;
+      } else {
+        content.innerHTML = `
+          <div class="audio-player-box">
+            <button class="btn-audio" id="btnAudioAction" onclick="toggleAudio()">
+              ▶️ Ouvir com Voz Guiada
+            </button>
+          </div>
+          <div class="prayer-body">${prayer.text}</div>
+        `;
+      }
+      modal.classList.add("active");
+    }
+
+    function toggleAudio() {
+      const btn = document.getElementById("btnAudioAction");
+      if (!btn) return;
+
+      if (isSpeaking) {
+        synth.cancel();
+        isSpeaking = false;
+        btn.innerHTML = "▶️ Ouvir com Voz Guiada";
+      } else {
+        synth.cancel();
+        const utterance = new SpeechSynthesisUtterance(currentPrayerText);
+        utterance.lang = "pt-BR";
+        utterance.rate = 0.9;
+        utterance.onend = function() {
+          isSpeaking = false;
+          if (document.getElementById("btnAudioAction")) {
+            document.getElementById("btnAudioAction").innerHTML = "▶️ Ouvir Novamente";
+          }
+        };
+        synth.speak(utterance);
+        isSpeaking = true;
+        btn.innerHTML = "⏹️ Pausar Oração";
+      }
+    }
+
+    function closeModal() {
+      if (isSpeaking) {
+        synth.cancel();
+        isSpeaking = false;
+      }
+      document.getElementById("prayerModal").classList.remove("active");
+    }
+
+    function switchTab(tab) {
+      document.querySelectorAll(".tab-content").forEach(el => el.classList.remove("active"));
+      document.querySelectorAll(".nav-item").forEach(el => el.classList.remove("active"));
+      
+      if (tab === 'prayers') {
+        document.getElementById("tabPrayers").classList.add("active");
+        document.getElementById("btnNavPrayers").classList.add("active");
+      } else {
+        document.getElementById("tabSettings").classList.add("active");
+        document.getElementById("btnNavSettings").classList.add("active");
+      }
+    }
+
+    function unlockVip() {
+      const input = document.getElementById("vipKeyInput").value.trim().toUpperCase();
+      if (input === "ORACAO2026") {
+        localStorage.setItem("oracao_vip_active", "true");
+        isVip = true;
+        alert("Chave VIP ativada com sucesso! Todas as 70 orações foram liberadas.");
+        renderPrayers();
+        switchTab('prayers');
+      } else {
+        alert("Chave inválida. Digite ORACAO2026 exatamente como recebido.");
+      }
+    }
+
+    renderPrayers();
+  </script>
+</body>
+</html>
