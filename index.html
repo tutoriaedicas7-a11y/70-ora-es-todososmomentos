@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>70 Orações Poderosas | App de Fé e Comunhão</title>
-  <meta name="theme-color" content="#121826">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>70 Orações Poderosas — Comunhão Diária com Deus</title>
+
+  <!-- Metatags para prévia com imagem e texto no WhatsApp / Redes Sociais -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="70 Orações Poderosas — Comunhão Diária com Deus" />
+  <meta property="og:description" content="Ouça e pratique orações diárias com narração em voz serena e fundo musical instrumental de adoração. Experimente grátis!" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1507692049790-de58290a4334?w=1200&auto=format&fit=crop&q=80" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="theme-color" content="#1e1b4b" />
+
+  <!-- Estilos e Fontes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --bg-dark: #0b0f19;
-      --card-bg: #131b2e;
-      --card-border: rgba(212, 175, 55, 0.2);
-      --gold-primary: #e5b95a;
-      --gold-light: #fef0cd;
-      --gold-gradient: linear-gradient(135deg, #f7d486 0%, #d4af37 50%, #99741e 100%);
-      --accent-blue: #3b82f6;
-      --text-main: #f3f4f6;
+      --bg: #0b0f19;
+      --card-bg: rgba(26, 32, 53, 0.85);
+      --card-border: rgba(212, 175, 55, 0.25);
+      --gold-primary: #d4af37;
+      --gold-light: #fef3c7;
+      --text-main: #f8fafc;
       --text-muted: #94a3b8;
-      --green-accent: #10b981;
-      --premium-badge: linear-gradient(135deg, #ec4899, #8b5cf6);
-      --radius-lg: 20px;
-      --radius-md: 14px;
-      --shadow-glow: 0 8px 32px 0 rgba(212, 175, 55, 0.15);
+      --primary-accent: #4338ca;
+      --vip-badge: #eab308;
     }
 
     * {
@@ -33,1667 +37,410 @@
       margin: 0;
       padding: 0;
       -webkit-tap-highlight-color: transparent;
-      font-family: 'Plus Jakarta Sans', sans-serif;
+      user-select: none;
     }
 
     body {
-      background-color: var(--bg-dark);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: radial-gradient(circle at top, #1e1b4b 0%, #0b0f19 100%);
       color: var(--text-main);
       min-height: 100vh;
       display: flex;
-      justify-content: center;
-      background-image: radial-gradient(circle at 50% 0%, #1e293b 0%, #0b0f19 75%);
-    }
-
-    #app-container {
-      width: 100%;
-      max-width: 480px;
-      min-height: 100vh;
-      display: flex;
       flex-direction: column;
-      position: relative;
       padding-bottom: 90px;
     }
 
-    /* Top Bar */
-    .top-header {
+    header {
+      padding: 24px 20px 16px;
+      text-align: center;
+      background: rgba(11, 15, 25, 0.9);
+      backdrop-filter: blur(10px);
       position: sticky;
       top: 0;
-      z-index: 50;
-      backdrop-filter: blur(16px);
-      background: rgba(11, 15, 25, 0.85);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 14px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      z-index: 40;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.2);
     }
 
-    .logo-area {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .logo-icon {
-      width: 36px;
-      height: 36px;
-      background: var(--gold-gradient);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #0b0f19;
-      font-weight: 800;
-      font-size: 20px;
-      box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
-    }
-
-    .logo-text h1 {
-      font-size: 16px;
-      font-weight: 700;
-      color: #fff;
-      letter-spacing: -0.3px;
-    }
-
-    .logo-text p {
-      font-size: 11px;
+    header h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.45rem;
       color: var(--gold-primary);
-      font-weight: 500;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
     }
 
-    .sub-btn-pill {
-      background: var(--gold-gradient);
-      color: #0b0f19;
-      font-size: 12px;
-      font-weight: 700;
-      padding: 7px 14px;
-      border-radius: 30px;
-      border: none;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      box-shadow: 0 3px 10px rgba(212, 175, 55, 0.25);
-      transition: transform 0.2s;
-    }
-    .sub-btn-pill:active { transform: scale(0.96); }
-
-    /* Main Content Sections */
-    .view-section {
-      display: none;
-      padding: 16px 20px;
-      animation: fadeIn 0.25s ease-in-out;
-    }
-    .view-section.active {
-      display: block;
+    header p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(6px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Hero Banner Diário */
-    .daily-card {
-      background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(19, 27, 46, 0.95));
-      border: 1px solid var(--card-border);
-      border-radius: var(--radius-lg);
-      padding: 20px;
-      margin-bottom: 22px;
-      position: relative;
-      overflow: hidden;
-      box-shadow: var(--shadow-glow);
-    }
-
-    .daily-card::before {
-      content: "";
-      position: absolute;
-      top: -40px;
-      right: -40px;
-      width: 120px;
-      height: 120px;
-      background: radial-gradient(circle, rgba(212, 175, 55, 0.2) 0%, transparent 70%);
-      border-radius: 50%;
-    }
-
-    .daily-tag {
+    .badge-status {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--gold-primary);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 10px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-top: 8px;
     }
 
-    .daily-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 20px;
-      color: #fff;
-      margin-bottom: 8px;
-      line-height: 1.3;
-    }
-
-    .daily-verse {
-      font-size: 13px;
+    .badge-free {
+      background: rgba(148, 163, 184, 0.15);
       color: #cbd5e1;
-      font-style: italic;
-      margin-bottom: 16px;
-      line-height: 1.5;
+      border: 1px solid rgba(148, 163, 184, 0.3);
     }
 
-    .daily-cta {
-      width: 100%;
-      background: var(--gold-gradient);
-      color: #0b0f19;
-      font-weight: 700;
-      padding: 12px;
-      border-radius: var(--radius-md);
-      border: none;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      font-size: 14px;
-      transition: opacity 0.2s;
+    .badge-vip {
+      background: rgba(234, 179, 8, 0.18);
+      color: #fde047;
+      border: 1px solid #eab308;
     }
 
-    /* Progress & Streak Bar */
-    .stats-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-bottom: 20px;
-    }
-
-    .stat-box {
-      background: var(--card-bg);
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      border-radius: var(--radius-md);
-      padding: 14px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .stat-icon {
-      font-size: 22px;
-      width: 42px;
-      height: 42px;
-      border-radius: 10px;
-      background: rgba(255, 255, 255, 0.05);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .stat-info span {
-      font-size: 11px;
-      color: var(--text-muted);
-      display: block;
-    }
-    .stat-info strong {
-      font-size: 16px;
-      color: #fff;
-    }
-
-    /* Search & Categories */
-    .search-box {
-      position: relative;
-      margin-bottom: 16px;
-    }
-
-    .search-box input {
-      width: 100%;
-      background: #131b2e;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 30px;
-      padding: 12px 18px 12px 42px;
-      color: #fff;
-      font-size: 14px;
-      outline: none;
-      transition: border 0.2s;
-    }
-    .search-box input:focus {
-      border-color: var(--gold-primary);
-    }
-
-    .search-box svg {
-      position: absolute;
-      left: 15px;
-      top: 13px;
-      color: var(--text-muted);
-    }
-
-    .categories-scroll {
+    /* Categorias */
+    .filter-bar {
       display: flex;
       gap: 8px;
       overflow-x: auto;
-      padding-bottom: 12px;
-      margin-bottom: 16px;
+      padding: 12px 20px;
       scrollbar-width: none;
     }
-    .categories-scroll::-webkit-scrollbar { display: none; }
+    .filter-bar::-webkit-scrollbar { display: none; }
 
-    .cat-pill {
+    .filter-btn {
       white-space: nowrap;
-      padding: 8px 14px;
-      background: #131b2e;
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-muted);
+      padding: 7px 14px;
       border-radius: 20px;
-      font-size: 12px;
-      color: #cbd5e1;
+      font-size: 0.8rem;
       cursor: pointer;
-      font-weight: 500;
       transition: all 0.2s;
     }
-    .cat-pill.active {
+
+    .filter-btn.active {
       background: var(--gold-primary);
       color: #0b0f19;
       font-weight: 700;
       border-color: var(--gold-primary);
     }
 
-    /* Prayers List */
-    .prayers-list {
+    /* Lista de Orações */
+    .container {
+      max-width: 600px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 8px 16px;
       display: flex;
       flex-direction: column;
       gap: 12px;
     }
 
-    .prayer-item {
+    .card {
       background: var(--card-bg);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      border-radius: var(--radius-md);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
       padding: 16px;
-      cursor: pointer;
-      transition: transform 0.2s, border-color 0.2s;
-      position: relative;
-    }
-    .prayer-item:active {
-      transform: scale(0.98);
-    }
-    .prayer-item.is-read {
-      border-left: 4px solid var(--green-accent);
-    }
-
-    .prayer-meta {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 8px;
+      cursor: pointer;
+      transition: transform 0.15s, border-color 0.2s;
     }
 
-    .prayer-num-badge {
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--gold-primary);
-      background: rgba(212, 175, 55, 0.12);
-      padding: 3px 8px;
-      border-radius: 6px;
+    .card:active {
+      transform: scale(0.98);
     }
 
-    .badge-locked {
-      background: rgba(236, 72, 153, 0.15);
-      color: #f472b6;
-      font-size: 11px;
-      font-weight: 700;
-      padding: 3px 8px;
-      border-radius: 6px;
+    .card-left {
       display: flex;
       align-items: center;
-      gap: 4px;
+      gap: 14px;
+      flex: 1;
+      min-width: 0;
     }
 
-    .badge-free {
-      background: rgba(16, 185, 129, 0.15);
-      color: #34d399;
-      font-size: 10px;
+    .card-number {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: rgba(212, 175, 55, 0.12);
+      color: var(--gold-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-weight: 700;
-      padding: 3px 8px;
-      border-radius: 6px;
-      text-transform: uppercase;
+      font-size: 0.9rem;
+      flex-shrink: 0;
     }
 
-    .prayer-item-title {
-      font-size: 15px;
+    .card-info h3 {
+      font-size: 0.98rem;
       font-weight: 600;
       color: #fff;
-      margin-bottom: 6px;
-      line-height: 1.4;
-    }
-
-    .prayer-item-desc {
-      font-size: 12px;
-      color: var(--text-muted);
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
+      margin-bottom: 2px;
+      white-space: nowrap;
       overflow: hidden;
-      line-height: 1.5;
+      text-overflow: ellipsis;
     }
 
-    /* Detail Modal / Screen */
-    #prayer-modal {
+    .card-info span {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .card-tag {
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 6px;
+      display: inline-block;
+    }
+
+    .tag-free {
+      background: rgba(34, 197, 94, 0.15);
+      color: #4ade80;
+    }
+
+    .tag-locked {
+      background: rgba(239, 68, 68, 0.15);
+      color: #f87171;
+    }
+
+    /* Modal de Leitura / Oração */
+    .modal {
       position: fixed;
       inset: 0;
-      background: #0b0f19;
+      background: rgba(7, 10, 19, 0.95);
+      backdrop-filter: blur(12px);
       z-index: 100;
       display: none;
       flex-direction: column;
-      overflow-y: auto;
-      padding-bottom: 80px;
+      justify-content: space-between;
+      padding: 24px 20px;
     }
-    #prayer-modal.open {
+
+    .modal.active {
       display: flex;
     }
 
     .modal-header {
-      position: sticky;
-      top: 0;
-      background: rgba(11, 15, 25, 0.92);
-      backdrop-filter: blur(12px);
-      padding: 16px 20px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      z-index: 10;
-    }
-
-    .close-modal-btn {
-      background: rgba(255, 255, 255, 0.08);
-      color: #fff;
-      border: none;
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      cursor: pointer;
-      display: flex;
       align-items: center;
-      justify-content: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 12px;
     }
 
-    .modal-actions {
-      display: flex;
-      gap: 8px;
+    .modal-header h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.15rem;
+      color: var(--gold-primary);
+      max-width: 80%;
     }
 
-    .action-icon-btn {
-      background: rgba(255, 255, 255, 0.08);
-      color: #fff;
+    .btn-close {
+      background: none;
       border: none;
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
+      color: #94a3b8;
+      font-size: 1.6rem;
       cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 16px;
-      transition: background 0.2s;
-    }
-    .action-icon-btn.active {
-      color: var(--gold-primary);
-      background: rgba(212, 175, 55, 0.2);
     }
 
-    .prayer-content-wrap {
-      padding: 24px 20px;
-      max-width: 480px;
-      margin: 0 auto;
-      width: 100%;
+    .modal-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 24px 8px;
+      font-size: 1.15rem;
+      line-height: 1.85;
+      color: #f1f5f9;
+      text-align: justify;
+      user-select: text;
     }
 
-    .prayer-category-tag {
-      color: var(--gold-primary);
-      font-size: 12px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 8px;
-    }
-
-    .prayer-main-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 24px;
-      color: #fff;
-      line-height: 1.3;
+    .modal-body p {
       margin-bottom: 16px;
     }
 
-    /* Player Áudio Narrador IA */
-    .audio-player-card {
-      background: linear-gradient(135deg, rgba(212, 175, 55, 0.12), rgba(19, 27, 46, 0.8));
+    .modal-footer {
+      background: rgba(26, 32, 53, 0.9);
       border: 1px solid var(--card-border);
-      border-radius: var(--radius-md);
+      border-radius: 16px;
       padding: 14px 18px;
-      margin-bottom: 22px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 12px;
     }
 
-    .audio-info h4 {
-      font-size: 13px;
-      color: #fff;
-      font-weight: 600;
-    }
-    .audio-info p {
-      font-size: 11px;
-      color: var(--gold-light);
+    .audio-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
 
-    .play-audio-btn {
-      background: var(--gold-gradient);
+    .btn-play {
+      background: var(--gold-primary);
+      border: none;
       color: #0b0f19;
-      border: none;
-      width: 40px;
-      height: 40px;
+      width: 48px;
+      height: 48px;
       border-radius: 50%;
-      font-size: 18px;
+      font-size: 1.3rem;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+      font-weight: bold;
     }
 
-    .block-card {
-      background: var(--card-bg);
-      border-radius: var(--radius-md);
-      padding: 18px;
-      margin-bottom: 18px;
-      border: 1px solid rgba(255, 255, 255, 0.05);
+    .audio-text {
+      font-size: 0.8rem;
+      color: var(--text-muted);
     }
 
-    .block-card.verse-card {
-      background: rgba(212, 175, 55, 0.07);
-      border-left: 4px solid var(--gold-primary);
-      font-style: italic;
-      color: #f1f5f9;
-      line-height: 1.6;
-      font-size: 15px;
-    }
-
-    .block-card.prayer-text-card {
-      border: 1px solid rgba(212, 175, 55, 0.25);
-      background: linear-gradient(180deg, rgba(19, 27, 46, 0.95), rgba(15, 23, 42, 0.98));
-    }
-
-    .prayer-body-text {
-      font-size: 16px;
-      line-height: 1.8;
-      color: #f3f4f6;
-      white-space: pre-line;
-      letter-spacing: 0.2px;
-    }
-
-    .block-label {
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--gold-primary);
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      margin-bottom: 8px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .modal-bottom-bar {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: rgba(11, 15, 25, 0.95);
-      backdrop-filter: blur(12px);
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 12px 20px;
-      display: flex;
-      justify-content: center;
-      z-index: 10;
-    }
-
-    .btn-mark-completed {
-      max-width: 440px;
-      width: 100%;
-      background: var(--green-accent);
+    .audio-text b {
+      display: block;
       color: #fff;
-      font-weight: 700;
-      font-size: 15px;
-      padding: 13px;
-      border-radius: var(--radius-md);
-      border: none;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
+      font-size: 0.85rem;
     }
 
-    /* Paywall Modal */
-    #paywall-modal {
+    /* Bloqueio VIP / Paywall */
+    .paywall-modal {
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.88);
-      backdrop-filter: blur(14px);
-      z-index: 200;
+      background: rgba(11, 15, 25, 0.98);
+      z-index: 110;
       display: none;
-      align-items: flex-end;
+      align-items: center;
       justify-content: center;
+      padding: 24px;
     }
-    #paywall-modal.open {
+
+    .paywall-modal.active {
       display: flex;
     }
 
-    .paywall-sheet {
-      width: 100%;
-      max-width: 480px;
-      background: #111827;
-      border-top: 2px solid var(--gold-primary);
-      border-radius: 28px 28px 0 0;
-      padding: 28px 24px 34px;
-      box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.6);
-      animation: slideUp 0.3s ease-out;
-      position: relative;
-      max-height: 90vh;
-      overflow-y: auto;
-    }
-
-    @keyframes slideUp {
-      from { transform: translateY(100%); }
-      to { transform: translateY(0); }
-    }
-
-    .paywall-close {
-      position: absolute;
-      top: 18px;
-      right: 20px;
-      background: rgba(255, 255, 255, 0.1);
-      border: none;
-      color: #94a3b8;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      cursor: pointer;
-      font-size: 14px;
-    }
-
-    .paywall-icon-crown {
-      width: 60px;
-      height: 60px;
-      background: var(--gold-gradient);
+    .paywall-card {
+      background: radial-gradient(circle at top, #2e1065 0%, #1e1b4b 100%);
+      border: 2px solid var(--gold-primary);
       border-radius: 20px;
-      margin: 0 auto 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 30px;
-      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
-    }
-
-    .paywall-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 22px;
+      padding: 30px 22px;
+      max-width: 440px;
+      width: 100%;
       text-align: center;
-      color: #fff;
-      margin-bottom: 8px;
+      position: relative;
     }
 
-    .paywall-subtitle {
-      text-align: center;
-      font-size: 13px;
-      color: var(--text-muted);
-      margin-bottom: 22px;
-    }
-
-    .paywall-features {
-      list-style: none;
-      margin-bottom: 22px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .paywall-features li {
-      font-size: 13px;
-      color: #e2e8f0;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .feature-check {
+    .paywall-card h2 {
+      font-family: 'Cinzel', serif;
       color: var(--gold-primary);
-      font-weight: 800;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
     }
 
-    .pricing-card {
-      background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(19, 27, 46, 0.7));
-      border: 1px solid var(--gold-primary);
-      border-radius: var(--radius-md);
-      padding: 16px;
-      text-align: center;
+    .paywall-card p {
+      font-size: 0.92rem;
+      color: #e2e8f0;
+      line-height: 1.5;
       margin-bottom: 18px;
     }
 
-    .price-old {
-      font-size: 12px;
-      color: #94a3b8;
-      text-decoration: line-through;
+    .price-box {
+      background: rgba(0, 0, 0, 0.35);
+      border-radius: 12px;
+      padding: 14px;
+      margin-bottom: 20px;
     }
 
-    .price-main {
-      font-size: 28px;
-      font-weight: 800;
-      color: #fff;
-      margin: 4px 0;
-    }
-
-    .price-main span {
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--gold-primary);
-    }
-
-    .paywall-cta-btn {
-      width: 100%;
-      background: var(--gold-gradient);
-      color: #0b0f19;
-      font-size: 16px;
-      font-weight: 800;
-      padding: 16px;
-      border-radius: 30px;
-      border: none;
-      cursor: pointer;
-      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.35);
-      transition: transform 0.2s;
-    }
-    .paywall-cta-btn:active {
-      transform: scale(0.97);
-    }
-
-    .already-sub-link {
+    .price-box span {
       display: block;
-      text-align: center;
-      margin-top: 14px;
-      font-size: 12px;
-      color: var(--text-muted);
-      cursor: pointer;
-      text-decoration: underline;
+      font-size: 0.8rem;
+      color: #cbd5e1;
     }
 
-    /* Bottom Navigation Bar */
-    .bottom-nav {
+    .price-box strong {
+      font-size: 1.8rem;
+      color: #38bdf8;
+    }
+
+    .btn-buy {
+      display: block;
+      width: 100%;
+      background: linear-gradient(135deg, #eab308 0%, #ca8a04 100%);
+      color: #0b0f19;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 15px;
+      border-radius: 12px;
+      font-size: 1.05rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 15px rgba(234, 179, 8, 0.4);
+      margin-bottom: 14px;
+    }
+
+    .btn-unlock-key {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #94a3b8;
+      font-size: 0.82rem;
+      padding: 8px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    /* Barra de Navegação Inferior */
+    nav.bottom-nav {
       position: fixed;
       bottom: 0;
       left: 0;
       right: 0;
-      max-width: 480px;
-      margin: 0 auto;
+      height: 70px;
       background: rgba(11, 15, 25, 0.95);
-      backdrop-filter: blur(16px);
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      padding: 8px 10px 14px;
-      z-index: 40;
+      backdrop-filter: blur(12px);
+      border-top: 1px solid rgba(212, 175, 55, 0.2);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      z-index: 50;
     }
 
-    .nav-btn {
-      background: none;
-      border: none;
-      color: var(--text-muted);
+    .nav-item {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 4px;
-      font-size: 11px;
-      font-weight: 500;
+      color: var(--text-muted);
+      font-size: 0.75rem;
       cursor: pointer;
-      transition: color 0.2s;
-    }
-    .nav-btn.active {
-      color: var(--gold-primary);
-    }
-    .nav-btn svg {
-      width: 22px;
-      height: 22px;
+      background: none;
+      border: none;
     }
 
-    /* Bloco Diário Espiritual (Notas) */
-    .note-input-area {
-      width: 100%;
-      height: 140px;
-      background: #131b2e;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: var(--radius-md);
-      padding: 14px;
-      color: #fff;
-      font-size: 14px;
-      margin-bottom: 12px;
-      resize: none;
+    .nav-item.active {
+      color: var(--gold-primary);
+      font-weight: 600;
+    }
+
+    .nav-item svg {
+      width: 22px;
+      height: 22px;
+      fill: currentColor;
     }
   </style>
 </head>
 <body>
 
-  <div id="app-container">
-    <!-- Barra Superior -->
-    <header class="top-header">
-      <div class="logo-area">
-        <div class="logo-icon">✝</div>
-        <div class="logo-text">
-          <h1>70 Orações Poderosas</h1>
-          <p>Comunhão Diária com Deus</p>
-        </div>
-      </div>
-      <button class="sub-btn-pill" id="header-vip-btn" onclick="openPaywall()">
-        <span>👑</span> <span id="vip-btn-text">Assinar PRO</span>
-      </button>
-    </header>
-
-    <!-- ABA 1: INÍCIO / CATÁLOGO -->
-    <main id="view-home" class="view-section active">
-      <!-- Card Oração do Dia -->
-      <section class="daily-card" id="daily-card">
-        <div class="daily-tag">✨ Oração Recomendada de Hoje</div>
-        <h2 class="daily-title" id="daily-title">Para quando a mente não para</h2>
-        <p class="daily-verse" id="daily-verse">"Lançando sobre Ele toda a vossa ansiedade..." - 1 Pedro 5:7</p>
-        <button class="daily-cta" onclick="openDailyPrayer()">
-          <span>📖</span> Começar Oração Diária
-        </button>
-      </section>
-
-      <!-- Progresso e Streak -->
-      <div class="stats-row">
-        <div class="stat-box">
-          <div class="stat-icon">🔥</div>
-          <div class="stat-info">
-            <span>Sequência de Fé</span>
-            <strong id="streak-count">1 Dia</strong>
-          </div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-icon">🙏</div>
-          <div class="stat-info">
-            <span>Orações Feitas</span>
-            <strong id="completed-count">0 / 70</strong>
-          </div>
-        </div>
-      </div>
-
-      <!-- Barra de Busca -->
-      <div class="search-box">
-        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-        <input type="text" id="search-input" placeholder="Buscar por tema (ansiedade, cura, filhos...)" oninput="filterPrayers()">
-      </div>
-
-      <!-- Categorias em Carrossel -->
-      <div class="categories-scroll" id="categories-scroll">
-        <button class="cat-pill active" onclick="selectCategory('Todas')">Todas (70)</button>
-        <button class="cat-pill" onclick="selectCategory('Depressão')">Depressão</button>
-        <button class="cat-pill" onclick="selectCategory('Ansiedade')">Ansiedade</button>
-        <button class="cat-pill" onclick="selectCategory('Tristeza e Solidão')">Tristeza & Solidão</button>
-        <button class="cat-pill" onclick="selectCategory('Casamento')">Casamento</button>
-        <button class="cat-pill" onclick="selectCategory('Família')">Família</button>
-        <button class="cat-pill" onclick="selectCategory('Filhos')">Filhos</button>
-        <button class="cat-pill" onclick="selectCategory('Proteção Espiritual')">Proteção</button>
-        <button class="cat-pill" onclick="selectCategory('Saúde & Enfermidades')">Saúde & Cura</button>
-        <button class="cat-pill" onclick="selectCategory('Prosperidade Financeira')">Prosperidade</button>
-        <button class="cat-pill" onclick="selectCategory('Trabalho & Portas Abertas')">Trabalho</button>
-      </div>
-
-      <!-- Lista de Orações -->
-      <div class="prayers-list" id="prayers-list-container">
-        <!-- Renderizado via JavaScript -->
-      </div>
-    </main>
-
-    <!-- ABA 2: FAVORITOS -->
-    <section id="view-favorites" class="view-section">
-      <h2 style="font-size: 20px; font-weight: 700; margin-bottom: 14px;">Minhas Orações Favoritas</h2>
-      <div class="prayers-list" id="favorites-list-container">
-        <!-- Renderizado dinamicamente -->
-      </div>
-    </section>
-
-    <!-- ABA 3: DIÁRIO DE ORAÇÃO & NOTAS -->
-    <section id="view-journal" class="view-section">
-      <h2 style="font-size: 20px; font-weight: 700; margin-bottom: 6px;">Meu Diário com Deus</h2>
-      <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 16px;">Escreva seus pedidos, agradecimentos e respostas de orações recebidas.</p>
-      
-      <textarea id="journal-input" class="note-input-area" placeholder="Escreva sua reflexão de hoje ou seu pedido a Deus..."></textarea>
-      <button class="daily-cta" style="margin-bottom: 24px;" onclick="saveJournalEntry()">
-        Salvar no Diário
-      </button>
-
-      <h3 style="font-size: 16px; margin-bottom: 12px;">Histórico de Anotações</h3>
-      <div id="journal-history" style="display: flex; flex-direction: column; gap: 10px;"></div>
-    </section>
-
-    <!-- ABA 4: PLANO & AJUSTES -->
-    <section id="view-settings" class="view-section">
-      <h2 style="font-size: 20px; font-weight: 700; margin-bottom: 14px;">Configurações & Assinatura</h2>
-      
-      <div class="block-card" style="border: 1px solid var(--gold-primary);">
-        <div class="block-label">Status da Assinatura</div>
-        <div style="font-size: 18px; font-weight: 800; color: #fff; margin-bottom: 4px;" id="sub-status-label">Acesso Gratuito (Limitado)</div>
-        <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 14px;">Desbloqueie todas as 70 orações completas, narração em áudio e diário ilimitado.</p>
-        <button class="daily-cta" onclick="openPaywall()">Gerenciar / Assinar Mensalidade</button>
-      </div>
-
-      <div class="block-card">
-        <div class="block-label">🎵 Fundo Musical de Oração (Aleluia)</div>
-        <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 10px;">O app já vem com o arranjo harmônico instrumental de <strong>Aleluia (Piano + Pad Celestial)</strong> embutido. Se preferir tocar um arquivo MP3 próprio:</p>
-        <div style="display: flex; align-items: center; gap: 10px; margin-top: 6px;">
-          <label class="cat-pill active" style="cursor: pointer; display: inline-block;">
-            <span>📁 Escolher MP3 do Celular</span>
-            <input type="file" accept="audio/*" onchange="loadCustomBackgroundAudio(event)" style="display: none;">
-          </label>
-          <span id="custom-audio-name" style="font-size: 11px; color: var(--gold-light);">Padrão: Aleluia Harmônico</span>
-        </div>
-      </div>
-
-      <div class="block-card">
-        <div class="block-label">Tamanho do Texto das Orações</div>
-        <div style="display: flex; gap: 10px; margin-top: 10px;">
-          <button class="cat-pill" onclick="changeFontSize('14px')">Pequeno</button>
-          <button class="cat-pill active" onclick="changeFontSize('16px')">Médio</button>
-          <button class="cat-pill" onclick="changeFontSize('19px')">Grande</button>
-        </div>
-      </div>
-
-      <div class="block-card">
-        <div class="block-label">Desbloqueio com Código VIP</div>
-        <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 10px;">Comprou pelo checkout e recebeu um código de ativação?</p>
-        <div style="display: flex; gap: 8px;">
-          <input type="text" id="activation-code" placeholder="Digite seu código ou e-mail" style="flex: 1; background: #0b0f19; border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 10px; color: #fff; font-size: 13px;">
-          <button class="cat-pill active" onclick="activateSubscription()">Ativar</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- NAVEGAÇÃO INFERIOR -->
-    <nav class="bottom-nav">
-      <button class="nav-btn active" onclick="switchTab('home')">
-        <svg fill="currentColor" viewBox="0 0 20 20"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
-        <span>Orações</span>
-      </button>
-      <button class="nav-btn" onclick="switchTab('favorites')">
-        <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path></svg>
-        <span>Favoritas</span>
-      </button>
-      <button class="nav-btn" onclick="switchTab('journal')">
-        <svg fill="currentColor" viewBox="0 0 20 20"><path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"></path></svg>
-        <span>Diário</span>
-      </button>
-      <button class="nav-btn" onclick="switchTab('settings')">
-        <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path></svg>
-        <span>Ajustes</span>
-      </button>
-    </nav>
-  </div>
-
-  <!-- MODAL DE VISUALIZAÇÃO DA ORAÇÃO -->
-  <div id="prayer-modal">
-    <div class="modal-header">
-      <button class="close-modal-btn" onclick="closePrayerModal()">✕</button>
-      <div class="modal-actions">
-        <button class="action-icon-btn" id="btn-fav" onclick="toggleFavoriteCurrent()">♥</button>
-        <button class="action-icon-btn" onclick="sharePrayerWhatsApp()">💬</button>
-      </div>
-    </div>
-
-    <div class="prayer-content-wrap">
-      <div class="prayer-category-tag" id="modal-category">Categoria</div>
-      <h1 class="prayer-main-title" id="modal-title">Título da Oração</h1>
-
-      <!-- Player de Narração com Voz Humanizada e Fundo Musical -->
-      <div class="audio-player-card" style="flex-direction: column; gap: 12px; align-items: stretch;">
-        <div style="display: flex; align-items: center; justify-content: space-between;">
-          <div class="audio-info">
-            <h4 style="display: flex; align-items: center; gap: 6px;">
-              <span>🎙️</span> Voz Humana com Fundo Musical
-            </h4>
-            <p id="tts-status-text">Toque para orar ouvindo música de fundo suave</p>
-          </div>
-          <button class="play-audio-btn" id="play-tts-btn" onclick="toggleSpeech()">▶</button>
-        </div>
-
-        <!-- Controles de Som Celestial -->
-        <div style="background: rgba(0,0,0,0.25); border-radius: 10px; padding: 10px 12px; display: flex; align-items: center; justify-content: space-between; font-size: 12px; color: #cbd5e1;">
-          <label style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
-            <input type="checkbox" id="bg-music-toggle" checked onchange="toggleMusicOption()" style="accent-color: var(--gold-primary);">
-            <span>🎹 Fundo Musical: Aleluia (Worship)</span>
-          </label>
-          <div style="display: flex; align-items: center; gap: 6px;">
-            <span>🔊</span>
-            <input type="range" id="music-vol" min="0" max="1" step="0.05" value="0.35" oninput="adjustMusicVol(this.value)" style="width: 70px; accent-color: var(--gold-primary);">
-          </div>
-        </div>
-        <div id="voice-indicator" style="font-size: 11px; color: var(--gold-light); text-align: right; font-style: italic;">Voz: Selecionando voz mais natural...</div>
-      </div>
-
-      <!-- Situação -->
-      <div class="block-card" id="card-situacao">
-        <div class="block-label">🌿 Momento de Vida</div>
-        <div style="font-size: 14px; color: #cbd5e1; line-height: 1.5;" id="modal-situacao"></div>
-      </div>
-
-      <!-- Palavra Acolhedora -->
-      <div class="block-card">
-        <div class="block-label">💛 Palavra ao Seu Coração</div>
-        <div style="font-size: 14px; color: #e2e8f0; line-height: 1.6;" id="modal-explicacao"></div>
-      </div>
-
-      <!-- Versículo Sagrado -->
-      <div class="block-card verse-card" id="card-versiculo">
-        <div class="block-label" style="color: var(--gold-primary);">📖 Versículo Bíblico</div>
-        <div id="modal-versiculo"></div>
-      </div>
-
-      <!-- Oração Central -->
-      <div class="block-card prayer-text-card">
-        <div class="block-label" style="font-size: 13px;">🙏 A Oração</div>
-        <div class="prayer-body-text" id="modal-oracao"></div>
-      </div>
-
-      <!-- Declaração de Fé -->
-      <div class="block-card" style="background: rgba(16, 185, 129, 0.08); border-left: 4px solid var(--green-accent);">
-        <div class="block-label" style="color: #34d399;">✝ Declaração de Vitória</div>
-        <div style="font-size: 14px; font-weight: 600; color: #ecfdf5; line-height: 1.5;" id="modal-declaracao"></div>
-      </div>
-
-      <!-- Reflexão Final -->
-      <div class="block-card" style="background: rgba(255, 255, 255, 0.03);">
-        <div class="block-label">✨ Reflexão Final</div>
-        <div style="font-size: 13px; color: #94a3b8; line-height: 1.5;" id="modal-reflexao"></div>
-      </div>
-    </div>
-
-    <!-- Barra inferior para marcar como concluída -->
-    <div class="modal-bottom-bar">
-      <button class="btn-mark-completed" id="btn-complete-prayer" onclick="markAsCompletedCurrent()">
-        <span>✓</span> Marcar como Oração Realizada
-      </button>
-    </div>
-  </div>
-
-  <!-- PAYWALL / TELA DE ASSINATURA MENSAL -->
-  <div id="paywall-modal">
-    <div class="paywall-sheet">
-      <button class="paywall-close" onclick="closePaywall()">✕</button>
-      
-      <div class="paywall-icon-crown">👑</div>
-      <h3 class="paywall-title">Desbloqueie o App Completo</h3>
-      <p class="paywall-subtitle">Tenha paz, direção espiritual e todas as 70 orações na palma da mão.</p>
-
-      <div style="background: rgba(16, 185, 129, 0.1); border: 1px dashed #10b981; border-radius: 12px; padding: 10px 14px; margin-bottom: 16px; font-size: 13px; color: #a7f3d0; text-align: center;">🎁 Você ganhou <strong>7 Orações 100% Gratuitas</strong> para experimentar!</div>
-      <ul class="paywall-features">
-        <li><span class="feature-check">✓</span> <strong>Acesso total às 70 Orações Poderosas</strong></li>
-        <li><span class="feature-check">✓</span> <strong>Áudio com Narração Guiada em todas as orações</strong></li>
-        <li><span class="feature-check">✓</span> <strong>Diário de Oração e Histórico de Milagres ilimitado</strong></li>
-        <li><span class="feature-check">✓</span> <strong>Atualizações e novas orações mensais inclusas</strong></li>
-        <li><span class="feature-check">✓</span> <strong>Cancele a qualquer momento com 1 clique</strong></li>
-      </ul>
-
-      <div class="pricing-card">
-        <div class="price-old">De R$ 39,90/mês</div>
-        <div class="price-main">R$ 19,90 <span>/mês</span></div>
-        <div style="font-size: 11px; color: var(--gold-light);">Menos de R$ 0,66 por dia para transformar sua vida espiritual</div>
-      </div>
-
-      <!-- BOTÃO DE VENDA COM LINK CONFIGURÁVEL -->
-      <button class="paywall-cta-btn" onclick="redirectToCheckout()">
-        ASSINAR AGORA COM DESCONTO
-      </button>
-
-      <span class="already-sub-link" onclick="openActivationPrompt()">Já tem acesso ou assinou? Clique para ativar</span>
-    </div>
-  </div>
-
-  <script>
-    // BANCO DE DADOS DAS ORAÇÕES CARREGADO DO EBOOK
-    const prayersData = [{"id": 1, "title": "Para o dia em que a tristeza parece não ter ﬁm", "category": "Depressão", "situacao": "Quando a cama parece mais pesada que o mundo e a alma\nnão encontra forças nem para respirar.", "explicacao": "Querido ﬁlho, Deus vê cada lágrima que\nvocê derrama em segredo. Ele não se assusta com seu silêncio,\nnem com sua dor. Hoje, Ele está mais perto de você do que jamais\nesteve, mesmo que você não sinta. Não tenha medo de ser\nhonesto com Ele — Ele já conhece o mais profundo do seu coração\ne ainda assim te ama com amor eterno.", "versiculo": "", "oracao": "Senhor está perto dos que têm o coração quebrantado e salva\nos de espírito abatido.” — Salmos 34:18\nPai Amado, Deus de toda consolação,\nVenho a Ti com o coração pesado, com a alma aﬂita e com os\nolhos cansados de chorar.\nReconheço que não tenho forças para lutar contra esta escuridão\nque insiste em me envolver.\nMas sei que Tu és a Luz do mundo, e que nenhuma escuridão\npode vencer a Tua presença.\nSenhor, eu clamo a Ti no meu silêncio.\nQuando a alegria parece ter se esvaído, e a esperança é um ﬁo\ntênue, segura-me em Tuas mãos fortes e não me deixes afundar.\nPai, toca cada parte ferida da minha alma, enxuga cada lágrima\nque os outros não veem, restaura o brilho dos meus olhos e\nrenova minhas forças.\nEu não entendo o que está acontecendo comigo, mas conﬁo que\nTu sabes o que é melhor para mim.\nDá-me, Senhor, um novo amanhecer, um sopro de vida, um\nmotivo para prosseguir. Que eu saiba que ainda há propósito em\nmeus dias.\nEm nome de Jesus, amém.", "encorajamento": "Você não está sozinho. Deus está\nconduzindo você, mesmo que o caminho seja escuro. Você\nsobreviverá a este dia, e ao próximo, porque o amor de Deus é a\nsua força.", "declaracao": "Eu declaro que a depressão não tem poder sobre mim, pois\no Espírito que habita em mim é maior que o espírito do\nmundo. Eu sou mais que vencedor.", "reflexao": "A noite pode ser longa, mas a alegria vem pela\nmanhã. Espere no Senhor, Ele é ﬁel."}, {"id": 2, "title": "Para quando o coração se sente vazio", "category": "Depressão", "situacao": "Para os dias em que você se sente vazio, sem vontade para\nnada, e a fé parece distante.", "explicacao": "Deus não pede que você esteja bem para\nse achegar a Ele. Ele quer você exatamente como está — cansado,\nferido e confuso. Jesus disse:", "versiculo": "“Bem-aventurados os que choram, porque serão consolados.” —\nMateus 5:4", "oracao": "Pai Celestial,\nHoje a minha alma está seca como um deserto, e eu não encontro\npalavras para expressar o que sinto.\nMas Tu sondas os corações e conheces o meu gemido\ninexprimível.\nDerrama, Senhor, o Teu azeite de alegria sobre mim, e renova o\nmeu espírito.\nOnde há vazio, coloca a Tua presença. Onde há desânimo, coloca\na Tua esperança.\nPerdoa-me pelas vezes em que duvidei, pelos dias em que me\nescondi de Ti.\nHoje, quero me render novamente ao Teu amor.\nEnche-me do Teu Espírito Santo, para que eu possa novamente\ncantar, sorrir e viver.\nEm nome de Jesus, amém.", "encorajamento": "O vazio que você sente é o espaço\nque Deus quer preencher com a plenitude do Seu amor. Não\ndesista.", "declaracao": "O Senhor é o meu pastor, nada me faltará. Ele restaurará a\nminha alma.", "reflexao": "Deus nunca desistiu de você. Ele está agindo em\nsilêncio."}, {"id": 3, "title": "Para renovar as forças", "category": "Depressão", "situacao": "Para aqueles que estão ﬁsicamente e emocionalmente\nesgotados.", "explicacao": "Deus não é um Deus que exige de você\nalém do que você pode dar. Ele é o Deus que repousa a Sua mão\nsobre você e diz:", "versiculo": "“Os que esperam no Senhor renovarão as suas forças.” — Isaías", "oracao": "Senhor renovarão as suas forças.” — Isaías\n40:31\nPoderoso Deus,\nEu venho a Ti como uma criança que corre para os braços do pai.\nEstou exausto, sem forças para continuar. O fardo é pesado\ndemais para mim.\nMas eu sei que Tu és o Deus que descansa em Ti me faz voar\ncomo águia.\nPai, eu troco a minha fraqueza pela Tua força. Eu troco a minha\nansiedade pela Tua paz.\nDá-me o sono reparador que eu preciso, renova a minha mente e\no meu corpo, e restaura a alegria da minha salvação.\nEm nome de Jesus, amém.", "encorajamento": "Permita-se parar. Deus não está\ncontando seus passos, Ele quer que você descanse n’Ele.", "declaracao": "A minha força vem do Senhor, que fez o céu e a terra. Ele\nnão se cansa nem se fatiga.", "reflexao": "O descanso em Deus não é preguiça, é sabedoria."}, {"id": 4, "title": "Para quando a dor é silenciosa", "category": "Depressão", "situacao": "Para dores que ninguém vê, mas que machucam\nprofundamente.", "explicacao": "Nem toda dor se expressa em lágrimas.\nÀs vezes, a dor mora no silêncio da alma. Mas Deus ouve o grito\ndo seu coração, mesmo que você não diga uma palavra. Ele está\nao seu lado.", "versiculo": "“Ele enxugará dos seus olhos toda lágrima.” — Apocalipse 21:4", "oracao": "Senhor,\nTu és o Deus que vê todas as coisas. Vê a minha lágrima oculta, o\nmeu suspiro silencioso.\nNinguém sabe o que realmente se passa em mim, mas Tu sabes.\nEu te peço que toques as áreas mais profundas do meu ser, onde\na dor se alojou e se enraizou.\nArranca o espinho, cura a ferida, e restaura a minha alma.\nQue a Tua paz, que excede todo entendimento, guarde o meu\ncoração e a minha mente.\nEm nome de Jesus, amém.", "encorajamento": "Deus é o médico dos corações\npartidos. Entregue a Ele a sua dor silenciosa.", "declaracao": "Ainda que eu ande pelo vale da sombra da morte, não\ntemerei mal algum, porque Tu estás comigo.", "reflexao": "A cura começa quando confessamos a nossa dor ao\nPai."}, {"id": 5, "title": "Para o recomeço", "category": "Depressão", "situacao": "Quando você sente que perdeu tudo e não vê saída.", "explicacao": "O Deus da Bíblia é o Deus das novas\noportunidades. Ele faz novas todas as coisas. Seu ﬁm é apenas o\ninício de algo novo que Ele já preparou para você.", "versiculo": "“Eis que faço novas todas as coisas.” — Apocalipse 21:5", "oracao": "Pai,\nEu me sinto no ﬁm da minha força, no ﬁm da minha esperança.\nMas confesso que creio em Ti, que fazes novas todas as coisas.\nDá-me um novo coração, uma nova visão, uma nova unção.\nQue o meu passado não determine o meu futuro.\nLevanta-me do pó e faz-me recomeçar, não com as minhas\nforças, mas com o Teu poder.\nEm nome de Jesus, amém.", "encorajamento": "Deus é especialista em reconstruir\nvidas. Sua história ainda não acabou.", "declaracao": "O que o inimigo planejou para o mal, Deus o transformará\nem bem.", "reflexao": "O amanhã pertence a Deus, e Ele já está lá.\n06 a 10 — Ansiedade"}, {"id": 6, "title": "Para a ansiedade que não cede", "category": "Ansiedade", "situacao": "Para quando a mente não para e o coração acelera.", "explicacao": "A ansiedade é uma batalha silenciosa,\nmas Deus tem uma palavra para você:", "versiculo": "", "oracao": "Pai,\nA minha mente não descansa, meus pensamentos se agitam, o\nmedo do amanhã aperta o meu peito.\nEu te entrego, Senhor, cada preocupação, cada pensamento\nintrusivo.\nCala a tempestade dentro de mim, e substitui a ansiedade pela\nTua paz.\nEnsina-me a viver um dia de cada vez, conﬁando que o amanhã\nestá em Tuas mãos.\nEsvazio a minha mente de todo pensamento que não vem de Ti, e\nencho-a com a Tua verdade.\nEm nome de Jesus, amém.", "encorajamento": "Pare de tentar controlar o\nincontrolável. Deus já está no seu amanhã.", "declaracao": "Não recebi o espírito de escravidão para temer, mas o\nespírito de adoção, pelo qual clamo: Aba, Pai.", "reflexao": "A paz não é a ausência de problemas, mas a\ncerteza da presença de Deus."}, {"id": 7, "title": "Para quando o futuro assusta", "category": "Ansiedade", "situacao": "Para dias de incertezas proﬁssionais, ﬁnanceiras ou\npessoais.", "explicacao": "O futuro pode ser um grande ponto de\ninterrogação, mas Deus é o Deus do futuro. Ele já está lá. Conﬁe\nque Ele tem um caminho de bênçãos para você.", "versiculo": "", "oracao": "Senhor, pensamentos de paz e não de mal.” — Jeremias 29:11\nSenhor,\nO futuro me assusta. Vejo tantas incertezas, tantas portas\nfechadas, e meu coração se enche de medo.\nMas eu sei que Tu tens um plano perfeito para mim.\nCaminha comigo neste vale de decisões, abre as portas certas,\nfecha as que não me levarão a Ti, e dá-me discernimento para\nescolher o caminho da vida.\nPai, que eu não ande pelos caminhos que Tu não abençoas, mas\nque eu encontre a Tua vontade e descanse nela.\nEm nome de Jesus, amém.", "encorajamento": "Deus não te deu um espírito de\nmedo, mas de poder, amor e moderação.", "declaracao": "O Senhor é o meu guia, não me faltará o caminho.", "reflexao": "O melhor de Deus está guardado para aqueles que\nconﬁam."}, {"id": 8, "title": "Para silenciar a mente", "category": "Ansiedade", "situacao": "Para quando a mente é um turbilhão de preocupações.", "explicacao": "Jesus nos convida:", "versiculo": "“Aquietai-vos e sabei que eu sou Deus.” — Salmos 46:10", "oracao": "Pai,\nMinha mente está cheia de ruídos, de tantas vozes, tantos “e se”,\ntantos “talvez”.\nVenho a Ti para colocar um ﬁm a esse caos.\nDerrama Tua paz sobre minha mente, e coloca em meu coração a\ncerteza de que Tu és soberano.\nCala os pensamentos que me aﬂigem, e fala ao meu coração com\na Tua doce voz.\nEm nome de Jesus, amém.", "encorajamento": "Deus não se assusta com sua\nansiedade. Ele quer te dar descanso.", "declaracao": "Eu tenho paz em meio à tempestade, pois Cristo está no\nbarco.", "reflexao": "O silêncio diante de Deus é a maior prova de\nconﬁança."}, {"id": 9, "title": "Para a tempestade emocional", "category": "Ansiedade", "situacao": "Para dias de choro, de desespero e de angústia.", "explicacao": "Você pode estar se sentindo como o\nbarco em meio à tempestade, mas Jesus está no controle. Ele tem\npoder para acalmar o vento e as ondas.", "versiculo": "“Clamaram ao Senhor na sua angústia, e Ele os livrou.” — Salmos", "oracao": "Senhor na sua angústia, e Ele os livrou.” — Salmos\n107:28\nSenhor Jesus,\nEstou em uma tempestade. As ondas batem forte, e o vento sopra\ncontra mim.\nMas eu clamo a Ti, pois sei que podes acalmar o vento.\nDize à tempestade da minha alma: “Cala-te, aquieta-te!”\nQue a Tua paz reine sobre o meu coração, e que eu saiba que Tu\nestás no barco comigo.\nEm nome de Jesus, amém.", "encorajamento": "A tempestade vai passar, e depois\nvirá a bonança.", "declaracao": "Deus é o meu refúgio e fortaleza, socorro bem presente na\nangústia.", "reflexao": "Deus não afasta a tempestade, mas te acompanha\nnela."}, {"id": 10, "title": "Para a manhã com paz", "category": "Ansiedade", "situacao": "Para começar o dia com a presença de Deus.", "explicacao": "Antes que o dia comece, Deus já está\nagindo a seu favor. Dedique os primeiros momentos do seu dia a\nEle.", "versiculo": "“De manhã cedo, orava.” — Marcos 1:35", "oracao": "Pai,\nAo acordar, quero colocar este novo dia em Tuas mãos.\nPuriﬁca meus pensamentos, guia meus passos, e que cada\npalavra minha seja agradável a Ti.\nDá-me sabedoria para tomar decisões, paciência para lidar com\nos outros, e amor para ser Tua luz onde eu for.\nEu te entrego as minhas preocupações, e recebo da Tua mão a\npaz que sustenta.\nEm nome de Jesus, amém.", "encorajamento": "Você não vai enfrentar este dia\nsozinho. Deus vai na sua frente.", "declaracao": "Este é o dia que o Senhor fez, regozijemo-nos e alegremo-\nnos nele.", "reflexao": "Cada amanhecer é uma prova do amor de Deus.\n11 a 15 — Tristeza e Solidão"}, {"id": 11, "title": "Para a solidão", "category": "Tristeza e Solidão", "situacao": "Para quando a ausência de pessoas faz doer.", "explicacao": "A solidão dói, mas saiba que você nunca\nestá realmente sozinho. Deus é o amigo que nunca te abandona.", "versiculo": "", "oracao": "Senhor,\nSinto-me só. As pessoas se foram, ou parecem não me entender.\nMas Tu és o Deus que nunca me desampara.\nEnche meu coração com a Tua presença, e faz-me sentir que eu\npertenço a Ti.\nQue a Tua amizade seja o suﬁciente para minha alma.\nCurta a ferida do abandono e faz-me saber que em Ti eu sou\ncompleto.\nEm nome de Jesus, amém.", "encorajamento": "Deus te ama com amor eterno. Você é\nprecioso para Ele.", "declaracao": "O Senhor está comigo, não temerei o que me possa fazer o\nhomem.", "reflexao": "A melhor companhia é a de Deus."}, {"id": 12, "title": "Para quando o coração está ferido", "category": "Tristeza e Solidão", "situacao": "Para mágoas e desilusões.", "explicacao": "Ser ferido por alguém que amamos é\numa dor aguda, mas Deus é o médico das almas. Ele quer\nrestaurar o que foi quebrado.", "versiculo": "“Sara os quebrantados de coração e liga as suas feridas.” —\nSalmos 147:3", "oracao": "Pai Amado,\nEu entreguei meu coração a alguém, e fui ferido. A mágoa tomou\nconta de mim, e a dor parece não passar.\nSenhor, eu te entrego esta ferida.\nCura o meu coração, tira de mim todo ressentimento, e ensina-\nme a perdoar, assim como Tu me perdoaste.\nNão deixes que a amargura se enraíze em mim, mas que o Teu\namor inunde cada parte do meu ser.\nEm nome de Jesus, amém.", "encorajamento": "Perdoar não é esquecer, é libertar a\nsi mesmo.", "declaracao": "Deus restaurará os anos que a traça comeu.", "reflexao": "A cura vem quando deixamos a dor nas mãos de\nDeus."}, {"id": 13, "title": "Para o luto e a perda", "category": "Tristeza e Solidão", "situacao": "Para quem perdeu alguém amado.", "explicacao": "A dor da perda é imensa, mas Deus é o\nDeus de toda consolação. Ele te envolverá com Seu amor.", "versiculo": "“Bem-aventurados os que choram, porque serão consolados.” —\nMateus 5:4", "oracao": "Senhor,\nA morte levou alguém que eu amo, e meu coração está\ndilacerado.\nEu não entendo, e a dor é grande demais.\nMas eu conﬁo que Tu és o Deus da ressurreição, e que a\nseparação é apenas temporária.\nDá-me consolo, Senhor, e enxuga minhas lágrimas.\nQue a esperança da vida eterna preencha este vazio.\nEm nome de Jesus, amém.", "encorajamento": "A promessa de Deus é que a morte\nnão tem a última palavra.", "declaracao": "Eu creio na ressurreição dos mortos e na vida eterna.", "reflexao": "Os que amamos estão vivos em Cristo."}, {"id": 14, "title": "Para quando ninguém te compreende", "category": "Tristeza e Solidão", "situacao": "Para sentimentos de rejeição e incompreensão.", "explicacao": "Deus te entende profundamente. Ele\nconhece os motivos do seu coração.", "versiculo": "“O coração conhece a sua própria amargura.” — Provérbios", "oracao": "Pai,\nÀs vezes sinto que ninguém me entende, que todos me julgam\nsem saber da minha história.\nMas Tu conheces o mais íntimo do meu ser.\nEu conﬁo que Tu és o meu maior defensor.\nNão preciso da aprovação de ninguém, pois tenho a Tua.\nDá-me paz em ser quem Tu me criaste para ser.\nEm nome de Jesus, amém.", "encorajamento": "Deus te formou com um propósito\núnico.", "declaracao": "O Senhor me conhece, e me aceita como eu sou.", "reflexao": "A aceitação de Deus vale mais que a de todos os\nhomens."}, {"id": 15, "title": "Para quando tudo dá errado", "category": "Tristeza e Solidão", "situacao": "Para dias de frustrações e fracassos.", "explicacao": "Nem tudo sai como planejamos, mas\nDeus pode usar até os nossos fracassos para o nosso bem.", "versiculo": "", "oracao": "Senhor,\nTudo parece estar dando errado. Cada porta se fecha, cada\nesperança se frustra.\nMas eu escolho conﬁar que Tu estás no controle.\nMuda o meu olhar para que eu veja as Tua mãos agindo.\nEnsina-me a descansar na Tua soberania.\nEm nome de Jesus, amém.", "encorajamento": "O que parece fracasso, Deus\ntransforma em vitória.", "declaracao": "Deus não me deu espírito de fracasso, mas de poder.\n16 a 20 — Casamento", "reflexao": "A vitória não depende do homem, mas de Deus."}, {"id": 16, "title": "Para o casamento que precisa de restauração", "category": "Casamento", "situacao": "Para casais que estão em crise.", "explicacao": "O casamento é uma aliança abençoada por\nDeus, mas todo casal passa por momentos difíceis. Deus quer restaurar\na unidade.", "versiculo": "“O que Deus ajuntou, o homem não separe.” — Mateus 19:6", "oracao": "Pai,\nEu oro pelo meu casamento. As diferenças têm nos afastado, a\ncomunicação está quebrada, e a chama se apagou.\nSenhor, coloca Tua mão sobre nossa união, restaura o amor que um\ndia sentimos.\nDá-nos paciência, compreensão e perdão.\nRessuscita o nosso casamento, e que ele seja um testemunho do Teu\namor.\nEm nome de Jesus, amém.", "encorajamento": "Deus está no negócio de restaurar\ncasamentos.", "declaracao": "O amor de Deus em nós é mais forte que qualquer crise.", "reflexao": "Nenhuma tempestade é maior que a presença de Cristo\nno barco."}, {"id": 17, "title": "Para o marido", "category": "Casamento", "situacao": "Para esposas que desejam interceder pelo marido.", "explicacao": "O marido é o cabeça do lar, e ele precisa de\ncobertura espiritual.", "versiculo": "“Maridos, amai vossas mulheres, como também Cristo amou a igreja.”\n— Efésios 5:25", "oracao": "Cristo amou a igreja.”\n— Efésios 5:25\nSenhor,\nColoco meu marido diante de Ti. Dá-lhe sabedoria, força e coragem\npara liderar nossa casa.\nProtege-o espiritualmente, física e emocionalmente.\nQue ele seja um homem segundo o Teu coração, um pai presente e um\nmarido amoroso.\nEm nome de Jesus, amém.", "encorajamento": "Sua oração é um escudo sobre seu marido.", "declaracao": "O homem que teme ao Senhor é abençoado.", "reflexao": "Uma esposa que ora é uma coluna de sustentação no lar."}, {"id": 18, "title": "Para a esposa", "category": "Casamento", "situacao": "Para maridos que desejam interceder pela esposa.", "explicacao": "A esposa é um presente de Deus, e merece ser\ncoberta de oração.", "versiculo": "“A mulher sábia ediﬁca a sua casa.” — Provérbios 14:1", "oracao": "Pai,\nEu te agradeço pela minha esposa. Ela é uma bênção em minha vida.\nDá-lhe saúde, força e sabedoria para cuidar de nossa família.\nRenova suas forças e enche seu coração de alegria.\nQue ela se sinta amada, valorizada e segura.\nEm nome de Jesus, amém.", "encorajamento": "Sua esposa é um tesouro que Deus te deu.", "declaracao": "A mulher que teme ao Senhor, essa será louvada.", "reflexao": "Abençoe sua esposa com palavras e orações."}, {"id": 19, "title": "Para o dia do casamento", "category": "Casamento", "situacao": "Para o dia do casamento ou para renovação de votos.", "explicacao": "Este dia é especial, e Deus quer abençoar o\ninício ou a renovação da sua história.", "versiculo": "“Por isso deixará o homem pai e mãe e se unirá à sua mulher.” —\nGênesis 2:24", "oracao": "Senhor,\nNeste dia, consagramos este casamento a Ti.\nQue a Tua presença esteja sobre nós, e que nosso lar seja um lugar de\npaz, amor e adoração.\nAbençoa nossa união e guarda-nos de todo mal.\nEm nome de Jesus, amém.", "encorajamento": "Que Deus escreva a história do seu\ncasamento.", "declaracao": "O que Deus uniu, ninguém separa.", "reflexao": "O casamento é uma aliança com Deus."}, {"id": 20, "title": "Para o perdão no casamento", "category": "Casamento", "situacao": "Para quando o perdão precisa acontecer no lar.", "explicacao": "Sem perdão, o casamento adoece. Deus nos\nperdoou primeiro, e nos convida a perdoar.", "versiculo": "“Perdoai-vos uns aos outros, como também Deus vos perdoou.” —\nColossenses 3:13", "oracao": "Pai,\nNo meu casamento, há feridas que precisam ser curadas. Meu coração\nestá endurecido, e o perdão parece impossível.\nMas eu sei que Tu me perdoaste, e que devo perdoar.\nSenhor, concede-me o dom do perdão. Libera-me da amargura, e\nrestaura a paz em meu lar.\nEm nome de Jesus, amém.", "encorajamento": "Perdoar é um ato de obediência e\nlibertação.", "declaracao": "O amor tudo sofre, tudo crê, tudo espera, tudo suporta.", "reflexao": "O perdão é a cola do casamento.\n21 a 25 — Família"}, {"id": 21, "title": "Pela família unida", "category": "Família", "situacao": "Para quando a família precisa de restauração.", "explicacao": "A família é o primeiro círculo de Deus na\nterra. Peça a Ele por união.", "versiculo": "“Quão bom e quão suave é que os irmãos vivam em união.” — Salmos", "oracao": "Senhor,\nEu oro pela minha família. Une-nos em Teu amor, dissipa toda\ncontenda, ciúme e ressentimento.\nQue o Teu amor reine em nossa casa. Transforma nosso lar em um\npedaço do céu.\nEm nome de Jesus, amém.", "encorajamento": "Família unida é um reﬂexo do amor de\nDeus.", "declaracao": "A minha casa será salva.", "reflexao": "A união da família depende da presença de Deus."}, {"id": 22, "title": "Para pais", "category": "Família", "situacao": "Para ﬁlhos que querem abençoar os pais.", "explicacao": "Seus pais são dádivas de Deus. Honre-os com\noração.", "versiculo": "“Honra teu pai e tua mãe, para que te vá bem.” — Efésios 6:2", "oracao": "Pai Celestial,\nAgradeço pelos meus pais. Abençoa-os com saúde, proteção e alegria.\nPerdoa-os pelas falhas, e que eles sintam o Teu amor. Dá-lhes\nsabedoria para os dias que virão.\nEm nome de Jesus, amém.", "encorajamento": "Seus pais são herança de Deus.", "declaracao": "Os justos serão lembrados para sempre.", "reflexao": "Honrar pais é honrar a Deus."}, {"id": 23, "title": "Para irmãos", "category": "Família", "situacao": "Para restaurar a relação entre irmãos.", "explicacao": "A rivalidade entre irmãos pode ser curada\npelo amor de Deus.", "versiculo": "“Vede como os irmãos vivem em união.” — Salmos 133:1", "oracao": "Senhor,\nEu oro pelos meus irmãos. Quebra toda parede de separação, cura as\nmágoas do passado, e renova o amor entre nós.\nQue possamos ser amigos e aliados em Teu nome.\nEm nome de Jesus, amém.", "encorajamento": "Irmãos são presentes que Deus nos dá.", "declaracao": "O amor fraternal permanece.", "reflexao": "A reconciliação é sempre possível."}, {"id": 24, "title": "Para a família em crise", "category": "Família", "situacao": "Para famílias atravessando diﬁculdades ﬁnanceiras, emocionais\nou espirituais.", "explicacao": "A crise pode abalar, mas Deus é a rocha que\nsustenta.", "versiculo": "“Deus é o nosso refúgio e fortaleza.” — Salmos 46:1", "oracao": "Pai,\nMinha família está em crise. As diﬁculdades nos cercam, e a\nesperança se esvai.\nMas eu clamo a Ti, que és o nosso refúgio. Sustenta-nos, e não deixes\nque desistamos.\nMostra-nos a saída, e dá-nos forças para perseverar.\nEm nome de Jesus, amém.", "encorajamento": "A crise não é o ﬁm, é um novo começo.", "declaracao": "Deus proverá todas as nossas necessidades.", "reflexao": "Deus nunca abandona uma família que conﬁa n’Ele."}, {"id": 25, "title": "Para a casa", "category": "Família", "situacao": "Para dedicar o lar a Deus.", "explicacao": "Sua casa é um lugar de proteção. Dedique-a\nao", "versiculo": "“A minha casa será chamada casa de oração.” — Mateus 21:13", "oracao": "Senhor.\n📖  “A minha casa será chamada casa de oração.” — Mateus 21:13\nSenhor,\nEu dedico esta casa a Ti. Que em cada canto haja paz, em cada porta\nhaja proteção, em cada coração haja amor.\nQue a Tua presença habite aqui, e que este lar seja um altar de\nadoração.\nEm nome de Jesus, amém.", "encorajamento": "Sua casa é um lugar sagrado.", "declaracao": "A bênção do Senhor enriquece, e não acrescenta dores.", "reflexao": "Casa dedicada a Deus é lugar de milagres.\n26 a 30 — Filhos"}, {"id": 26, "title": "Para os ﬁlhos pequenos", "category": "Filhos", "situacao": "Para pais que desejam interceder pelos ﬁlhos pequenos.", "explicacao": "Seus ﬁlhos são herança do", "versiculo": "“Deixai vir a mim os pequeninos.” — Mateus 19:14", "oracao": "Senhor. Cubra-os\nde oração.\n📖  “Deixai vir a mim os pequeninos.” — Mateus 19:14\nPai,\nEu coloco meus ﬁlhos pequenos diante de Ti. Protege-os, guarda-os e\nguia-os.\nEnche-os de alegria, saúde e sabedoria. Que cresçam te amando e\nservindo.\nEm nome de Jesus, amém.", "encorajamento": "Seus ﬁlhos são preciosos aos olhos de\nDeus.", "declaracao": "Todos os teus ﬁlhos serão ensinados por Deus.", "reflexao": "Orar pelos ﬁlhos é o melhor presente que você pode dar."}, {"id": 27, "title": "Para ﬁlhos adolescentes", "category": "Filhos", "situacao": "Para ﬁlhos na fase da juventude.", "explicacao": "A adolescência é desaﬁadora, mas Deus tem\num plano para eles.", "versiculo": "“Ensina a criança no caminho em que deve andar.” — Provérbios 22:6", "oracao": "Senhor,\nMeus ﬁlhos estão entrando na juventude, e muitas tentações os\ncercam.\nDá-lhes discernimento, e livra-os do mal. Que Tu sejas o centro de\nsuas vidas.\nDá-me sabedoria para guiá-los.\nEm nome de Jesus, amém.", "encorajamento": "A juventude é uma semente para o futuro.", "declaracao": "Deus guarda os jovens que conﬁam n’Ele.", "reflexao": "A oração dos pais é o alicerce dos ﬁlhos."}, {"id": 28, "title": "Para ﬁlhos que se desviaram", "category": "Filhos", "situacao": "Para ﬁlhos que estão longe de Deus.", "explicacao": "O coração de um pai nunca desiste. Deus está\ntrabalhando nos bastidores.", "versiculo": "“O Pai misericordioso correu para abraçar o ﬁlho pródigo.” — Lucas", "oracao": "Pai misericordioso correu para abraçar o ﬁlho pródigo.” — Lucas\n15:20\nPai,\nMeu ﬁlho (a) se afastou de Ti. Meu coração está angustiado, mas eu\nconﬁo que Teus olhos estão sobre ele.\nTraze-o de volta, Senhor, e quebranta seu coração. Use-me para ser\num canal do Teu amor.\nEm nome de Jesus, amém.", "encorajamento": "O amor de Deus vai buscar o ﬁlho perdido.", "declaracao": "Aquele que começou a boa obra, a completará.", "reflexao": "Nunca pare de orar pelos seus ﬁlhos."}, {"id": 29, "title": "Pela proteção dos ﬁlhos", "category": "Filhos", "situacao": "Para a segurança física e espiritual dos ﬁlhos.", "explicacao": "O mundo é perigoso, mas Deus é o guarda de\nIsrael.", "versiculo": "“O anjo do Senhor acampa-se ao redor dos que o temem.” — Salmos", "oracao": "Senhor acampa-se ao redor dos que o temem.” — Salmos\n34:7\nSenhor,\nColoque uma cerca de proteção ao redor dos meus ﬁlhos. Guardai-os\nde todo perigo visível e invisível.\nProtege-os no caminho, na escola, em todo lugar. Que eles sintam a\nTua presença constante.\nEm nome de Jesus, amém.", "encorajamento": "Deus é o melhor guarda-costas.", "declaracao": "O Senhor guardará a sua entrada e saída.", "reflexao": "A proteção de Deus é completa."}, {"id": 30, "title": "Para o futuro dos ﬁlhos", "category": "Filhos", "situacao": "Para o futuro e o propósito de vida dos ﬁlhos.", "explicacao": "Deus tem sonhos maiores para seus ﬁlhos do\nque você pode imaginar.", "versiculo": "“Eu sei os planos que tenho para vocês.” — Jeremias 29:11", "oracao": "Pai,\nEu declaro que o futuro dos meus ﬁlhos está em Tuas mãos.\nAbre portas de oportunidades, e guia-os para o propósito que criaste\npara eles.\nDá-lhes coragem para sonhar e fé para realizar.\nEm nome de Jesus, amém.", "encorajamento": "O melhor ainda está por vir.", "declaracao": "Os ﬁlhos dos justos são abençoados.", "reflexao": "O futuro de seus ﬁlhos está garantido em Deus.\n31 a 35 — Pessoas Falsas e\nRelacionamentos Tóxicos"}, {"id": 31, "title": "Para lidar com pessoas falsas", "category": "Relacionamentos & Proteção", "situacao": "Para quando você descobre que alguém não é sincero.", "explicacao": "A falsidade machuca, mas Deus é a verdade.\nConﬁe n’Ele para te proteger.", "versiculo": "“Livra-me, Senhor, da boca mentirosa.” — Salmos 120:2", "oracao": "Senhor, da boca mentirosa.” — Salmos 120:2\nSenhor,\nEu tenho convivido com pessoas que não são sinceras. Suas palavras\nferem, e sua falsidade me confunde.\nMas Tu és a Verdade, e eu me refugio em Ti.\nProtege-me das línguas enganosas, e não permitas que eu caia em\nsuas armadilhas.\nDá-me discernimento para reconhecer quem é de verdade, e sabedoria\npara lidar com quem não o é.\nNão deixes que a amargura entre no meu coração, mas que eu seja\nmanso e sábio como Tu.\nEm nome de Jesus, amém.", "encorajamento": "Deus é o juiz justo. Ele vê o que ninguém\nvê.", "declaracao": "O Senhor é a minha luz e a minha salvação; a quem temerei?", "reflexao": "Conﬁe em Deus, e não nas aparências dos homens."}, {"id": 32, "title": "Para relacionamentos tóxicos", "category": "Relacionamentos & Proteção", "situacao": "Para quando você está preso a relações que sugam sua paz.", "explicacao": "Relacionamentos tóxicos podem drenar sua\nenergia e sua fé. Deus quer te dar liberdade.", "versiculo": "“Não vos prendais a um jugo desigual com os inﬁéis.” — 2 Coríntios", "oracao": "Pai,\nEu reconheço que estou em um relacionamento que não me faz bem.\nEle me tira a paz, me angustia e me afasta de Ti.\nMas eu conﬁo que Tu tens o poder de me libertar.\nDá-me coragem para tomar as decisões certas, e sabedoria para\nestabelecer limites saudáveis.\nQue eu não permita que pessoas tóxicas deﬁnam o meu valor.\nEm nome de Jesus, amém.", "encorajamento": "Você merece relacionamentos que\nreﬂetem o amor de Deus.", "declaracao": "O Senhor é o meu libertador, e Ele me levará para um lugar de\npaz.", "reflexao": "Às vezes, a melhor atitude é se afastar para se\npreservar."}, {"id": 33, "title": "Para perdoar quem te feriu", "category": "Relacionamentos & Proteção", "situacao": "Para quando a mágoa te impede de seguir em frente.", "explicacao": "Perdoar não é fácil, mas é necessário. O\nperdão te liberta.", "versiculo": "“Perdoai, e sereis perdoados.” — Lucas 6:37", "oracao": "Senhor,\nEssa pessoa me feriu profundamente, e a dor ainda é viva. Mas eu sei\nque não posso viver com amargura no coração.\nHoje, pela Tua graça, eu escolho perdoar. Libero essa pessoa da dívida\nque ela tem comigo, assim como Tu me libertaste da minha dívida\npara Contigo.\nCura a minha alma e tira de mim todo ressentimento.\nEm nome de Jesus, amém.", "encorajamento": "O perdão é a chave da sua libertação.", "declaracao": "Perdoado, eu perdoo. Livre, eu liberto.", "reflexao": "Perdoar não é justiﬁcar o erro, é libertar o coração."}, {"id": 34, "title": "Para não cair em funis", "category": "Relacionamentos & Proteção", "situacao": "Para quando você sente que está sendo manipulado.", "explicacao": "O inimigo usa pessoas para te enganar. Mas\nDeus te dá discernimento.", "versiculo": "“Sede prudentes como as serpentes e simples como as pombas.” —\nMateus 10:16", "oracao": "Pai,\nEu sinto que há pessoas ao meu redor tentando me manipular.\nDá-me olhos para ver além das aparências, e discernimento para não\ncair em armadilhas.\nCala as vozes de mentira, e fortalece a Tua voz em meu coração.\nEm nome de Jesus, amém.", "encorajamento": "Deus te dá sabedoria para vencer todo\nengano.", "declaracao": "O Espírito Santo me guia a toda a verdade.", "reflexao": "Quem anda com Deus não tropeça nas armadilhas do\ninimigo."}, {"id": 35, "title": "Para se afastar de pessoas que não somam", "category": "Relacionamentos & Proteção", "situacao": "Para quando você precisa se afastar de más inﬂuências.", "explicacao": "Nem todos que estão ao seu lado são amigos.\nDeus te dará discernimento.", "versiculo": "“Não andeis em conselho dos ímpios.” — Salmos 1:1", "oracao": "Senhor,\nDá-me coragem para me afastar de pessoas que não acrescentam\nnada à minha vida.\nQue eu não seja inﬂuenciado por más companhias, mas que eu ande\ncom os que te amam.\nLimpa o meu círculo de amizades, e coloca ao meu lado pessoas de fé.\nEm nome de Jesus, amém.", "encorajamento": "Amigos verdadeiros são um presente de\nDeus.", "declaracao": "As minhas amizades serão ediﬁcantes.", "reflexao": "Melhor estar sozinho do que mal acompanhado.\n36 a 40 — Proteção Espiritual"}, {"id": 36, "title": "Proteção espiritual", "category": "Proteção Espiritual", "situacao": "Para pedir a cobertura de Deus sobre sua vida.", "explicacao": "Vivemos em uma batalha espiritual, mas\nDeus nos dá armadura e proteção.", "versiculo": "“Revesti-vos de toda a armadura de Deus.” — Efésios 6:11", "oracao": "Pai,\nEu me coloco sob a Tua proteção neste dia. Reveste-me com a\narmadura de Deus: a verdade, a justiça, a paz, a fé, a salvação e a Tua\nPalavra.\nProtege-me de todo ataque do inimigo, visível ou invisível. Cobre-me\ncom o sangue de Jesus, e guarda-me em Tuas mãos.\nEm nome de Jesus, amém.", "encorajamento": "Você está seguro nas mãos do Todo-\nPoderoso.", "declaracao": "O Senhor é o meu refúgio, e nele conﬁo.", "reflexao": "A proteção de Deus é a nossa segurança."}, {"id": 37, "title": "Contra inimigos visíveis e invisíveis", "category": "Proteção Espiritual", "situacao": "Para quem enfrenta perseguição ou oposição.", "explicacao": "O inimigo pode agir através de pessoas, mas\nDeus é maior.", "versiculo": "“O anjo do Senhor acampa-se ao redor dos que o temem.” — Salmos", "oracao": "Senhor acampa-se ao redor dos que o temem.” — Salmos\n34:7\nSenhor,\nEu clamo a Ti contra todos os que se levantam contra mim. Cala as\nlínguas mentirosas, desfaz os planos malignos, e protege-me de todo\nmal.\nQue os meus inimigos sejam envergonhados, e que eu seja guardado\nem paz.\nEm nome de Jesus, amém.", "encorajamento": "Deus é o teu defensor.", "declaracao": "Se Deus é por mim, quem será contra mim?", "reflexao": "A batalha é do Senhor, a vitória é nossa."}, {"id": 38, "title": "Pela proteção da casa", "category": "Proteção Espiritual", "situacao": "Para a segurança do lar.", "explicacao": "A casa é um lugar de descanso. Declare que\nela está protegida.", "versiculo": "“A casa dos justos permanece.” — Provérbios 12:7", "oracao": "Pai,\nEu coloco esta casa sob a Tua proteção. Protege-a de assaltos, de\nincêndios, de acidentes e de todo mal. Que a Tua presença seja o nosso\nguardião.\nEm nome de Jesus, amém.", "encorajamento": "Deus é o guarda da sua casa.", "declaracao": "O Senhor guardará a minha casa.", "reflexao": "A segurança da casa vem de Deus."}, {"id": 39, "title": "Proteção para a família", "category": "Proteção Espiritual", "situacao": "Para a família inteira.", "explicacao": "A família é alvo do inimigo, mas Deus a\nprotege.", "versiculo": "“Eu e minha casa serviremos ao Senhor.” — Josué 24:15", "oracao": "Senhor.” — Josué 24:15\nSenhor,\nProtege toda a minha família. Pai, mãe, ﬁlhos, irmãos, avós. Que\nnenhum mal nos alcance, e que a Tua paz reine entre nós. Cobre-nos\ncom o Teu amor.\nEm nome de Jesus, amém.", "encorajamento": "Família protegida por Deus é inabalável.", "declaracao": "A minha casa está segura em Deus.", "reflexao": "A oração é o escudo da família."}, {"id": 40, "title": "Contra a inveja e o olho maligno", "category": "Proteção Espiritual", "situacao": "Para quando você sente que está sendo alvo de inveja.", "explicacao": "A inveja é uma arma espiritual, mas Deus te\nprotege.", "versiculo": "", "oracao": "Pai,\nEu declaro que estou protegido contra toda inveja, ciúme e maldição.\nO sangue de Jesus me cobre, e nenhuma ﬂecha do inimigo me atingirá.\nQue a Tua luz dissipe toda sombra de mal sobre mim.\nEm nome de Jesus, amém.", "encorajamento": "Você é abençoado, e ninguém pode\namaldiçoar o que Deus abençoou.", "declaracao": "Estou protegido pelo sangue de Jesus.", "reflexao": "A bênção de Deus anula toda maldição.\n41 a 45 — Libertação Espiritual"}, {"id": 41, "title": "Libertação de opressão espiritual", "category": "Libertação Espiritual", "situacao": "Para quem sente opressão, peso espiritual ou escuridão.", "explicacao": "Deus quer te libertar de toda opressão que te\nprende. A liberdade é a herança de todo ﬁlho de Deus.", "versiculo": "“Onde está o Espírito do Senhor, aí há liberdade.” — 2 Coríntios 3:17", "oracao": "Senhor, aí há liberdade.” — 2 Coríntios 3:17\nSenhor Jesus,\nEu me sinto oprimido por uma força que não entendo. Há um peso\nsobre mim, uma escuridão que me cerca.\nMas eu sei que Tu tens poder sobre todo principado e potestade.\nEm nome de Jesus, eu quebro todo jugo de opressão sobre minha vida.\nEu ordeno que todo espírito de escravidão, medo e depressão se retire\nagora.\nEnche-me com Tua luz, Tua paz e Tua presença. Eu sou livre, porque o\nFilho me libertou!\nEm nome de Jesus, amém.", "encorajamento": "A liberdade é sua, em Cristo Jesus.", "declaracao": "A minha vida está liberta de toda opressão.", "reflexao": "Jesus veio para nos libertar, e liberdade é o que Ele quer\nte dar."}, {"id": 42, "title": "Quebrar maldições hereditárias", "category": "Libertação Espiritual", "situacao": "Para quem sente padrões de pecado ou sofrimento repetidos na\nfamília.", "explicacao": "Há padrões que se repetem, mas em Cristo,\nvocê é uma nova criação. As gerações passadas não determinam o seu\nfuturo.", "versiculo": "“Se alguém está em Cristo, é nova criatura.” — 2 Coríntios 5:17", "oracao": "Cristo,\nvocê é uma nova criação. As gerações passadas não determinam o seu\nfuturo.\n📖  “Se alguém está em Cristo, é nova criatura.” — 2 Coríntios 5:17\nPai,\nEu venho diante de Ti para quebrar toda maldição hereditária que\nopera em minha vida.\nEm nome de Jesus, eu quebro todo ciclo de pecado, enfermidade,\npobreza e sofrimento que veio de meus antepassados.\nDeclaro que em Cristo, sou uma nova geração, redimida e abençoada.\nO sangue de Jesus me puriﬁca e me liberta.\nEm nome de Jesus, amém.", "encorajamento": "Sua história começa agora, em Cristo.", "declaracao": "Em Cristo, sou mais que vencedor.", "reflexao": "As gerações passadas não têm poder sobre o seu\ndestino."}, {"id": 43, "title": "Contra pensamentos suicidas", "category": "Libertação Espiritual", "situacao": "Para quem tem pensamentos de morte.", "explicacao": "A vida é preciosa para Deus. Ele tem um\nplano para você, e a morte não é a saída.", "versiculo": "“Eu vim para que tenham vida, e a tenham em abundância.” — João", "oracao": "Senhor,\nPensamentos de morte têm assombrado a minha mente. Mas eu sei\nque Tu és o Deus da vida, e que tens um propósito para mim.\nEu rejeito esses pensamentos em nome de Jesus.\nEnche a minha mente com a Tua esperança, e mostra-me que a vida\nvale a pena.\nDá-me forças para continuar, e ajude-me a procurar ajuda.\nEm nome de Jesus, amém.", "encorajamento": "Sua vida importa, e Deus tem um grande\npropósito para você.", "declaracao": "A vida que Deus me deu é preciosa e eterna.", "reflexao": "A saída não é a morte, é a vida em Cristo."}, {"id": 44, "title": "Libertação do medo", "category": "Libertação Espiritual", "situacao": "Para quem vive em constante medo.", "explicacao": "Deus não te deu espírito de medo, mas de\npoder, amor e moderação. Liberte-se!", "versiculo": "“Não temais, porque eu vos redimi.” — Isaías 43:1", "oracao": "Pai,\nO medo tem paralisado minha vida. Medo do futuro, do fracasso, do\nque os outros pensam.\nMas eu declaro que o medo não é de Deus.\nEm nome de Jesus, eu quebro o espírito de medo sobre minha vida.\nEnche-me de coragem e fé, e ajuda-me a conﬁar plenamente em Ti.\nEm nome de Jesus, amém.", "encorajamento": "O medo não é dono de você.", "declaracao": "O Senhor é a minha luz, e a minha salvação, a quem temerei?", "reflexao": "A fé é o antídoto do medo."}, {"id": 45, "title": "Para ser cheio do Espírito Santo", "category": "Libertação Espiritual", "situacao": "Para quem deseja uma vida cheia do Espírito.", "explicacao": "O Espírito Santo é o poder que nos capacita a\nviver uma vida vitoriosa.", "versiculo": "“Sede cheios do Espírito.” — Efésios 5:18", "oracao": "Senhor,\nEu desejo ser cheio do Teu Santo Espírito. Esvazia-me de mim mesmo,\ne enche-me da Tua presença.\nConcede-me dons, frutos e poder para viver para Tua glória. Que o\nEspírito Santo me guie, me console e me capacite.\nEm nome de Jesus, amém.", "encorajamento": "O Espírito Santo é seu Consolador.", "declaracao": "O Espírito Santo habita em mim.", "reflexao": "Uma vida cheia do Espírito é uma vida abundante.\n46 a 50 — Enfermidades e\nRecuperação"}, {"id": 46, "title": "Para enfermidade física", "category": "Saúde & Enfermidades", "situacao": "Para quem está doente no corpo.", "explicacao": "Deus é o médico dos médicos. Ele pode curar\ntoda enfermidade.", "versiculo": "“Eu sou o Senhor que te sara.” — Êxodo 15:26", "oracao": "Senhor que te sara.” — Êxodo 15:26\nPai,\nEu estou doente, e o meu corpo clama por cura. Mas eu sei que pelas\nferidas de Jesus, eu fui curado.\nToca cada parte do meu corpo, e restaura a minha saúde. Dá-me\npaciência durante este processo, e fortalece a minha fé.\nEm nome de Jesus, amém.", "encorajamento": "Deus está trabalhando para curar você.", "declaracao": "A cura é herança dos ﬁlhos de Deus.", "reflexao": "A fé move o braço de Deus."}, {"id": 47, "title": "Para recuperação após cirurgia", "category": "Saúde & Enfermidades", "situacao": "Para quem passou por procedimentos médicos.", "explicacao": "Deus restaura e renova seu corpo.", "versiculo": "“O Senhor te sustentará na cama da enfermidade.” — Salmos 41:3", "oracao": "Senhor te sustentará na cama da enfermidade.” — Salmos 41:3\nSenhor,\nAgradeço por ter passado pela cirurgia. Peço que agora o Teu poder\nrestaurativo aja sobre meu corpo.\nCura minhas feridas, renova minhas forças, e que minha recuperação\nseja completa.\nEm nome de Jesus, amém.", "encorajamento": "A mão de Deus está sobre você durante a\nrecuperação.", "declaracao": "Deus restaura a minha saúde.", "reflexao": "A recuperação é uma bênção."}, {"id": 48, "title": "Para enfermidades crônicas", "category": "Saúde & Enfermidades", "situacao": "Para quem convive com doenças de longa duração.", "explicacao": "Mesmo na enfermidade, Deus é a sua força. A\ngraça d’Ele te basta.", "versiculo": "“A minha graça te basta.” — 2 Coríntios 12:9", "oracao": "Pai,\nEsta enfermidade tem sido uma longa batalha, e muitas vezes me\nsinto cansado.\nMas eu conﬁo que a Tua graça é suﬁciente para mim.\nDá-me forças para suportar, e, se for da Tua vontade, traze a cura\ncompleta.\nAcima de tudo, que o Teu nome seja gloriﬁcado em minha vida.\nEm nome de Jesus, amém.", "encorajamento": "Deus está com você em cada dia de luta.", "declaracao": "Mesmo na fraqueza, Deus é forte em mim.", "reflexao": "Na enfermidade, aprendemos a depender mais de Deus."}, {"id": 49, "title": "Para quem cuida de enfermos", "category": "Saúde & Enfermidades", "situacao": "Para quem está cuidando de alguém doente.", "explicacao": "Cuidar é um ato de amor, mas também exige\nforça. Deus te fortalece.", "versiculo": "“O amor é sofredor, é benigno.” — 1 Coríntios 13:4", "oracao": "Senhor,\nEu cuido de alguém que está doente, e muitas vezes me sinto esgotado.\nDá-me força, paciência e sabedoria. Renova minhas energias, e enche\nmeu coração de compaixão.\nQue eu possa ser um canal do Teu amor e cuidado.\nEm nome de Jesus, amém.", "encorajamento": "Deus vê seu esforço e te recompensará.", "declaracao": "O Senhor é a minha força e o meu sustento.", "reflexao": "Cuidar do próximo é cuidar de Deus."}, {"id": 50, "title": "Cura para a alma", "category": "Saúde & Enfermidades", "situacao": "Para quem sente a alma ferida.", "explicacao": "Nem toda ferida é no corpo. A alma também\nprecisa de cura.", "versiculo": "“Ele restaurará a minha alma.” — Salmos 23:3", "oracao": "Pai,\nA minha alma está ferida. Há marcas profundas que ninguém vê.\nMas Tu és o Deus que restaura a alma. Toca as profundezas do meu\nser, e faz-me inteiro novamente.\nEm nome de Jesus, amém.", "encorajamento": "Deus quer restaurar cada parte de você.", "declaracao": "A minha alma descansa em Deus.", "reflexao": "A cura da alma é o começo da liberdade.\n51 a 55 — Cura Emocional"}, {"id": 51, "title": "Para curar a mágoa", "category": "Cura Emocional", "situacao": "Para quem guarda mágoas no coração.", "explicacao": "A mágoa é um veneno que nos corrói.\nLiberte-se dela.", "versiculo": "“Alegra-te com os que se alegram, chora com os que choram.” —\nRomanos 12:15", "oracao": "Senhor,\nEu tenho guardado mágoas que me pesam. Hoje eu as libero diante de\nTi.\nCura a minha dor, e ensina-me a viver em alegria.\nEm nome de Jesus, amém.", "encorajamento": "Mágoa guardada é prisioneira.", "declaracao": "Eu libero o perdão para ser livre.", "reflexao": "A cura vem quando liberamos a mágoa."}, {"id": 52, "title": "Para restaurar a autoestima", "category": "Cura Emocional", "situacao": "Para quem não se sente bom o suﬁciente.", "explicacao": "Você foi criado à imagem e semelhança de\nDeus. Você é precioso.", "versiculo": "“Eu te conheço pelo nome, e tu és meu.” — Isaías 43:1", "oracao": "Pai,\nMuitas vezes me sinto inferior, incapaz e sem valor. Mas eu sei que Tu\nme criaste com propósito e amor.\nAjuda-me a ver a mim mesmo como Tu me vês.\nEm nome de Jesus, amém.", "encorajamento": "Você é ﬁlho de Deus, herdeiro d’Ele.", "declaracao": "Sou mais que vencedor em Cristo.", "reflexao": "Sua identidade está em Deus, não no que os outros\ndizem."}, {"id": 53, "title": "Para curar traumas do passado", "category": "Cura Emocional", "situacao": "Para quem carrega dores antigas.", "explicacao": "O passado não precisa deﬁnir seu presente.\nDeus pode curar as feridas mais profundas.", "versiculo": "“Esquecendo-me das coisas que ﬁcam para trás.” — Filipenses 3:13", "oracao": "Senhor,\nO passado ainda me assombra. Coisas que aconteceram há muito\ntempo ainda doem.\nMas eu declaro que o passado não tem poder sobre mim. Cura essas\nferidas antigas, e dá-me um novo começo.\nEm nome de Jesus, amém.", "encorajamento": "Deus pode fazer novas todas as coisas.", "declaracao": "O passado está perdoado, o futuro está diante de mim.", "reflexao": "Hoje é o primeiro dia do resto da sua vida."}, {"id": 54, "title": "Para a paz interior", "category": "Cura Emocional", "situacao": "Para quem busca tranquilidade.", "explicacao": "A paz que Deus dá não é como a paz do\nmundo. Ela é profunda e duradoura.", "versiculo": "“Deixo-vos a paz, a Minha paz vos dou.” — João 14:27", "oracao": "Pai,\nEu anseio pela Tua paz. Acalma as tempestades do meu coração, e faz-\nme descansar em Ti.\nQue a Tua paz governa a minha vida.\nEm nome de Jesus, amém.", "encorajamento": "A paz de Deus é o maior tesouro.", "declaracao": "Eu tenho paz em meio a qualquer situação.", "reflexao": "A paz não é a ausência de problemas, mas a presença de\nDeus."}, {"id": 55, "title": "Para a alegria que não se abala", "category": "Cura Emocional", "situacao": "Para quem perdeu a alegria de viver.", "explicacao": "A alegria do", "versiculo": "“A alegria do Senhor é a vossa força.” — Neemias 8:10", "oracao": "Senhor é a nossa força. Ela não\ndepende das circunstâncias.\n📖  “A alegria do Senhor é a vossa força.” — Neemias 8:10\nSenhor,\nEu perdi a alegria. Os dias se tornaram pesados. Mas eu sei que a Tua\nalegria pode me sustentar.\nRestaura em mim a alegria da Tua salvação.\nEm nome de Jesus, amém.", "encorajamento": "A alegria de Deus é mais forte que\nqualquer tristeza.", "declaracao": "A alegria do Senhor me fortalece.", "reflexao": "A alegria é fruto do Espírito.\n56 a 60 — Prosperidade e Provisão\nFinanceira"}, {"id": 56, "title": "Para provisão ﬁnanceira", "category": "Prosperidade Financeira", "situacao": "Para quem está passando por diﬁculdades ﬁnanceiras.", "explicacao": "Deus é o nosso provedor. Ele cuida de cada\nnecessidade.", "versiculo": "“O meu Deus suprirá todas as vossas necessidades.” — Filipenses 4:19", "oracao": "Pai,\nAs contas estão apertadas, e a provisão tem faltado. Mas eu conﬁo\nque Tu és o meu provedor.\nAbençoa as minhas mãos, abre portas de oportunidades, e dá-me\nsabedoria para administrar o que recebo.\nEm nome de Jesus, amém.", "encorajamento": "Deus é o dono do ouro e da prata.", "declaracao": "As minhas necessidades estão supridas em Cristo.", "reflexao": "Deus nunca abandona os seus."}, {"id": 57, "title": "Para prosperidade", "category": "Prosperidade Financeira", "situacao": "Para quem deseja prosperar em todas as áreas.", "explicacao": "Prosperidade não é apenas dinheiro, é vida\nabundante.", "versiculo": "“Amado, oro para que prosperes em tudo.” — 3 João 1:2", "oracao": "Senhor,\nEu oro por prosperidade em minha vida. Prosperidade espiritual,\nemocional, física e ﬁnanceira.\nQue eu seja uma bênção para outros, e que o Teu nome seja\ngloriﬁcado.\nEm nome de Jesus, amém.", "encorajamento": "Deus quer te abençoar para você\nabençoar.", "declaracao": "Sou próspero em todas as áreas.", "reflexao": "A prosperidade vem de Deus."}, {"id": 58, "title": "Para sair das dívidas", "category": "Prosperidade Financeira", "situacao": "Para quem está endividado.", "explicacao": "As dívidas podem ser uma prisão, mas Deus\nte dará estratégias para sair delas.", "versiculo": "“O justo dá e não retém.” — Provérbios 21:26", "oracao": "Pai,\nEstou endividado e a pressão ﬁnanceira é grande. Dá-me sabedoria\npara administrar meu dinheiro, e abre portas para que eu possa\nquitar minhas dívidas.\nEm nome de Jesus, amém.", "encorajamento": "Deus te dará a saída.", "declaracao": "Sou livre das dívidas em nome de Jesus.", "reflexao": "A liberdade ﬁnanceira é possível com Deus."}, {"id": 59, "title": "Para generosidade", "category": "Prosperidade Financeira", "situacao": "Para quem deseja ser uma bênção.", "explicacao": "Dar é uma expressão do amor de Deus.", "versiculo": "“Há quem dá, e ainda assim se torna mais rico.” — Provérbios 11:24", "oracao": "Senhor,\nEnsina-me a dar com generosidade. Que eu seja um canal de bênçãos\npara o próximo. E que, ao dar, eu conﬁe que Tu suprirás minhas\nnecessidades.\nEm nome de Jesus, amém.", "encorajamento": "Deus ama ao que dá com alegria.", "declaracao": "A minha generosidade será recompensada.", "reflexao": "Dar é plantar para o futuro."}, {"id": 60, "title": "Para administração ﬁnanceira", "category": "Prosperidade Financeira", "situacao": "Para quem precisa de sabedoria com as ﬁnanças.", "explicacao": "Administrar bem o dinheiro é um ato de\nsabedoria.", "versiculo": "“O sábio ouve e cresce em sabedoria.” — Provérbios 1:5", "oracao": "Pai,\nDá-me sabedoria para administrar o que Tu me dás. Ensina-me a\npoupar, a investir e a gastar com discernimento.\nQue o dinheiro seja meu servo, e não meu senhor.\nEm nome de Jesus, amém.", "encorajamento": "Deus quer te dar discernimento\nﬁnanceiro.", "declaracao": "Tenho sabedoria para administrar minhas ﬁnanças.", "reflexao": "A sabedoria é o melhor investimento.\n61 a 63 — Trabalho e Portas Abertas"}, {"id": 61, "title": "Para o trabalho", "category": "Trabalho & Portas Abertas", "situacao": "Para quem busca estabilidade no trabalho.", "explicacao": "Deus te deu talentos e habilidades. Use-os\npara Sua glória.", "versiculo": "“Tudo quanto ﬁzerdes, fazei-o de coração.” — Colossenses 3:23", "oracao": "Senhor,\nColoco o meu trabalho em Tuas mãos. Abençoa minhas atividades, dá-\nme sabedoria para resolver problemas, e que eu seja luz no meu\nambiente de trabalho.\nEm nome de Jesus, amém.", "encorajamento": "Deus está contigo onde quer que vás.", "declaracao": "O Senhor prospera o trabalho das minhas mãos.", "reflexao": "Trabalhe como se fosse para Deus."}, {"id": 62, "title": "Para portas abertas", "category": "Trabalho & Portas Abertas", "situacao": "Para quem busca novas oportunidades.", "explicacao": "Deus abrirá portas que ninguém pode fechar.", "versiculo": "“Eis que pus diante de ti uma porta aberta.” — Apocalipse 3:8", "oracao": "Pai,\nEu oro por portas abertas em minha vida. Que o Senhor me guie para\nas oportunidades certas, e feche as portas que não são para mim.\nQue eu esteja no lugar certo, na hora certa.\nEm nome de Jesus, amém.", "encorajamento": "Deus é o guardião das portas.", "declaracao": "Portas abertas me esperam.", "reflexao": "As portas certas virão no tempo certo."}, {"id": 63, "title": "Para promoção e crescimento", "category": "Trabalho & Portas Abertas", "situacao": "Para quem deseja crescimento proﬁssional.", "explicacao": "Deus te exaltará no tempo certo. Seja ﬁel.", "versiculo": "“O que é ﬁel no pouco, também no muito é ﬁel.” — Lucas 16:10", "oracao": "Senhor,\nEu desejo crescer no meu trabalho. Dá-me favor diante dos meus\nlíderes, e que meu trabalho seja reconhecido.\nAcima de tudo, que eu seja ﬁel em tudo que faço.\nEm nome de Jesus, amém.", "encorajamento": "A promoção vem de Deus.", "declaracao": "Deus exalta os humildes.", "reflexao": "A ﬁdelidade é a chave do crescimento.\n64 a 66 — Gratidão"}, {"id": 64, "title": "Gratidão por um novo dia", "category": "Gratidão", "situacao": "Para agradecer pelo amanhecer.", "explicacao": "Cada dia é uma dádiva de Deus. Agradeça!", "versiculo": "“Este é o dia que o Senhor fez.” — Salmos 118:24", "oracao": "Senhor fez.” — Salmos 118:24\nPai,\nObrigado por mais um dia. Agradeço pelo ar que respiro, pela vida\nque tenho, pelas pessoas que amo.\nAjuda-me a viver este dia com alegria e gratidão.\nEm nome de Jesus, amém.", "encorajamento": "A gratidão é a porta da alegria.", "declaracao": "Sou grato por tudo que Deus faz.", "reflexao": "A gratidão transforma a vida."}, {"id": 65, "title": "Gratidão pela salvação", "category": "Gratidão", "situacao": "Para agradecer pela salvação em Cristo.", "explicacao": "A maior dádiva de Deus é a salvação.\nAgradeça!", "versiculo": "“Graças a Deus por seu dom inefável!” — 2 Coríntios 9:15", "oracao": "Cristo.\nExplicação Acolhedora: A maior dádiva de Deus é a salvação.\nAgradeça!\n📖  “Graças a Deus por seu dom inefável!” — 2 Coríntios 9:15\nSenhor,\nObrigado por me salvar. Por me amar antes mesmo que eu te\nconhecesse. Obrigado por pagar o preço dos meus pecados na cruz.\nEu te louvo e te adoro!\nEm nome de Jesus, amém.", "encorajamento": "A salvação é um presente eterno.", "declaracao": "Sou salvo pela graça de Deus.", "reflexao": "A gratidão é a resposta natural à salvação."}, {"id": 66, "title": "Gratidão por tudo", "category": "Gratidão", "situacao": "Para agradecer em todas as circunstâncias.", "explicacao": "Em tudo, dai graças. A gratidão abre portas.", "versiculo": "“Em tudo, dai graças.” — 1 Tessalonicenses 5:18", "oracao": "Pai,\nObrigado por tudo. Pelas alegrias, pelas tristezas, pelas vitórias e\npelos desaﬁos.\nConﬁo que tudo coopera para o meu bem. Eu te agradeço!\nEm nome de Jesus, amém.", "encorajamento": "A gratidão te faz ver o agir de Deus.", "declaracao": "Sou grato em todas as circunstâncias.", "reflexao": "A gratidão é a atitude do coração sábio.\n67 a 68 — Felicidade e Paz Interior"}, {"id": 67, "title": "Para a felicidade verdadeira", "category": "Felicidade & Paz Interior", "situacao": "Para quem busca a felicidade genuína.", "explicacao": "A verdadeira felicidade não está nas coisas,\nmas em Deus.", "versiculo": "“Bem-aventurados os que conﬁam no Senhor.” — Salmos 40:4", "oracao": "Senhor.” — Salmos 40:4\nSenhor,\nEu busco a felicidade que só Tu podes dar. Não a felicidade\npassageira, mas a que vem da Tua presença.\nEnche-me de alegria e satisfação em Ti.\nEm nome de Jesus, amém.", "encorajamento": "A verdadeira felicidade é encontrada em\nDeus.", "declaracao": "A minha alegria está no Senhor.", "reflexao": "Felicidade é estar em comunhão com Deus."}, {"id": 68, "title": "Para a paz que excede todo entendimento", "category": "Felicidade & Paz Interior", "situacao": "Para quem precisa de paz em meio ao caos.", "explicacao": "A paz de Deus não depende das\ncircunstâncias.", "versiculo": "", "oracao": "Pai,\nEu clamo pela Tua paz. Uma paz que o mundo não pode dar. Guarda o\nmeu coração e a minha mente, e que eu descanse em Ti.\nEm nome de Jesus, amém.", "encorajamento": "A paz de Deus é profunda e duradoura.", "declaracao": "Eu tenho paz em meio às tempestades.", "reflexao": "A paz de Deus é o alicerce da alma.\n69 — Vitória sobre o Medo"}, {"id": 69, "title": "Vitória sobre o medo", "category": "Vitória sobre o Medo", "situacao": "Para quem enfrenta medos paralisantes.", "explicacao": "O medo é um inimigo, mas a fé é a vitória.", "versiculo": "“Porque Deus não nos deu o espírito de temor.” — 2 Timóteo 1:7", "oracao": "Senhor,\nO medo tem tentado dominar minha vida. Mas eu declaro que o medo\nnão tem autoridade sobre mim.\nEm nome de Jesus, eu o expulso. Enche-me de fé, coragem e ousadia.\nE ajuda-me a conﬁar plenamente em Ti.\nEm nome de Jesus, amém.", "encorajamento": "A fé é maior que o medo.", "declaracao": "O Senhor é a minha força, não temerei.", "reflexao": "A vitória sobre o medo começa com a fé.\n70 — Consagração Total a Deus"}, {"id": 70, "title": "Consagração total a Deus", "category": "Consagração a Deus", "situacao": "Para quem deseja entregar toda a vida a Deus.", "explicacao": "Deus quer toda a sua vida, não apenas uma\nparte. Consagre-se a Ele.", "versiculo": "", "oracao": "Pai,\nEu consagro totalmente a minha vida a Ti. Tudo o que sou, tudo o que\ntenho, tudo o que desejo, eu coloco em Tuas mãos.\nQue a Tua vontade seja feita em mim. Usa-me para a Tua glória. Que a\nminha vida seja um altar de adoração.\nEm nome de Jesus, amém.", "encorajamento": "A consagração é o caminho da intimidade\ncom Deus.", "declaracao": "Toda a minha vida pertence a Deus.", "reflexao": "O maior presente que podemos dar a Deus é a nossa\nvida."}];
-
-    // CONFIGURAÇÃO DO CHECKOUT DE VENDA
-    // Coloque aqui o link da Kiwify, Cakto, Hotmart ou Mercado Pago para assinatura mensal:
-    const CHECKOUT_URL = "https://pay.kiwify.com.br/ONEdsD6";
-
-    // ESTADO DO APLICATIVO
-    let isSubscribed = localStorage.getItem("app_subscribed") === "true";
-    let completedPrayers = JSON.parse(localStorage.getItem("completed_prayers") || "[]");
-    let favoritePrayers = JSON.parse(localStorage.getItem("favorite_prayers") || "[]");
-    let currentPrayer = null;
-    let selectedCat = "Todas";
-    let speechSynth = window.speechSynthesis;
-    let currentUtterance = null;
-    let isPlayingAudio = false;
-
-    // INICIALIZAÇÃO
-    window.addEventListener("DOMContentLoaded", () => {
-      updateSubscriptionUI();
-      renderPrayersList();
-      renderStats();
-      setupDailyPrayer();
-      renderJournalHistory();
-    });
-
-    function updateSubscriptionUI() {
-      const btnVipText = document.getElementById("vip-btn-text");
-      const subLabel = document.getElementById("sub-status-label");
-      if (isSubscribed) {
-        btnVipText.innerText = "Plano Ativo ✨";
-        subLabel.innerText = "Assinatura VIP Ativa (Acesso Total)";
-        subLabel.style.color = "#34d399";
-      } else {
-        btnVipText.innerText = "Assinar PRO";
-        subLabel.innerText = "Acesso Gratuito (7 orações gratuitas liberadas)";
-        subLabel.style.color = "#f472b6";
-      }
-    }
-
-    function renderPrayersList() {
-      const container = document.getElementById("prayers-list-container");
-      const searchTerm = document.getElementById("search-input").value.toLowerCase();
-      container.innerHTML = "";
-
-      const filtered = prayersData.filter(p => {
-        const matchesCategory = (selectedCat === "Todas") || (p.category === selectedCat);
-        const matchesSearch = p.title.toLowerCase().includes(searchTerm) || 
-                              p.category.toLowerCase().includes(searchTerm) || 
-                              p.situacao.toLowerCase().includes(searchTerm);
-        return matchesCategory && matchesSearch;
-      });
-
-      filtered.forEach((prayer, index) => {
-        // As 3 primeiras são grátis para degustação, as demais requerem assinatura
-        const isLocked = !isSubscribed && prayer.id > 7;
-        const isDone = completedPrayers.includes(prayer.id);
-
-        const card = document.createElement("div");
-        card.className = `prayer-item ${isDone ? 'is-read' : ''}`;
-        card.onclick = () => openPrayer(prayer, isLocked);
-
-        card.innerHTML = `
-          <div class="prayer-meta">
-            <span class="prayer-num-badge">Oração #${String(prayer.id).padStart(2, '0')}</span>
-            ${isLocked ? '<span class="badge-locked">🔒 Assinante</span>' : (prayer.id <= 7 ? '<span class="badge-free">Grátis</span>' : '<span style="color:#10b981;font-size:11px;">✓ Desbloqueada</span>')}
-          </div>
-          <div class="prayer-item-title">${prayer.title}</div>
-          <div class="prayer-item-desc">${prayer.situacao || prayer.explicacao}</div>
-        `;
-        container.appendChild(card);
-      });
-    }
-
-    function filterPrayers() {
-      renderPrayersList();
-    }
-
-    function selectCategory(cat) {
-      selectedCat = cat;
-      document.querySelectorAll(".cat-pill").forEach(el => {
-        el.classList.toggle("active", el.innerText.startsWith(cat) || (cat === 'Todas' && el.innerText.startsWith('Todas')));
-      });
-      renderPrayersList();
-    }
-
-    function openPrayer(prayer, isLocked) {
-      if (isLocked) {
-        openPaywall();
-        return;
-      }
-      currentPrayer = prayer;
-      document.getElementById("modal-category").innerText = prayer.category + " • Oração #" + prayer.id;
-      document.getElementById("modal-title").innerText = prayer.title;
-      document.getElementById("modal-situacao").innerText = prayer.situacao || "Momento de oração e intimidade com Deus.";
-      document.getElementById("modal-explicacao").innerText = prayer.explicacao;
-      
-      const versCard = document.getElementById("card-versiculo");
-      if (prayer.versiculo) {
-        versCard.style.display = "block";
-        document.getElementById("modal-versiculo").innerText = prayer.versiculo;
-      } else {
-        versCard.style.display = "none";
-      }
-
-      document.getElementById("modal-oracao").innerText = prayer.oracao;
-      document.getElementById("modal-declaracao").innerText = prayer.declaracao || "Eu sou mais que vencedor por meio de Cristo.";
-      document.getElementById("modal-reflexao").innerText = prayer.reflexao || "Espere no Senhor, Ele é fiel.";
-
-      // Atualiza botões
-      updateModalActions();
-      stopAudio();
-
-      document.getElementById("prayer-modal").classList.add("open");
-    }
-
-    function closePrayerModal() {
-      stopAudio();
-      document.getElementById("prayer-modal").classList.remove("open");
-    }
-
-    function updateModalActions() {
-      if (!currentPrayer) return;
-      const isFav = favoritePrayers.includes(currentPrayer.id);
-      const isDone = completedPrayers.includes(currentPrayer.id);
-      
-      const btnFav = document.getElementById("btn-fav");
-      btnFav.classList.toggle("active", isFav);
-      btnFav.innerText = isFav ? "♥" : "♡";
-
-      const btnComplete = document.getElementById("btn-complete-prayer");
-      if (isDone) {
-        btnComplete.innerHTML = "<span>✓</span> Oração Realizada";
-        btnComplete.style.background = "#059669";
-      } else {
-        btnComplete.innerHTML = "<span>✓</span> Marcar como Oração Realizada";
-        btnComplete.style.background = "#10b981";
-      }
-    }
-
-    function toggleFavoriteCurrent() {
-      if (!currentPrayer) return;
-      const id = currentPrayer.id;
-      if (favoritePrayers.includes(id)) {
-        favoritePrayers = favoritePrayers.filter(x => x !== id);
-      } else {
-        favoritePrayers.push(id);
-      }
-      localStorage.setItem("favorite_prayers", JSON.stringify(favoritePrayers));
-      updateModalActions();
-      renderFavoritesList();
-    }
-
-    function markAsCompletedCurrent() {
-      if (!currentPrayer) return;
-      const id = currentPrayer.id;
-      if (!completedPrayers.includes(id)) {
-        completedPrayers.push(id);
-        localStorage.setItem("completed_prayers", JSON.stringify(completedPrayers));
-      }
-      updateModalActions();
-      renderPrayersList();
-      renderStats();
-    }
-
-    function sharePrayerWhatsApp() {
-      if (!currentPrayer) return;
-      const text = `*${currentPrayer.title}*\n\n${currentPrayer.oracao}\n\n_Palavra de Fé: ${currentPrayer.declaracao}_\n\nEnviado pelo App 70 Orações Poderosas.`;
-      const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
-      window.open(url, "_blank");
-    }
-
-    // ========================================================
-    // MOTOR DE ÁUDIO & VOZ HUMANA INFALÍVEL (WEB AUDIO + SPEECH CHUNKING)
-    // ========================================================
-    let audioCtx = null;
-    let masterMusicGain = null;
-    let isMusicPlaying = false;
-    let bestPtVoice = null;
-    let musicInterval = null;
-    let currentSpeechChunks = [];
-    let currentChunkIndex = 0;
-    let isSpeakingActive = false;
-    let speechKeepAliveTimer = null;
-    let customAudioElement = null;
-
-    // Stream direto de fundo musical de oração relaxante (Piano & Cordas Worship)
-    // Backup online de alta fidelidade hospedado em CDN estável
-    const STREAM_AUDIO_URL = "https://cdn.freesound.org/previews/563/563143_11861866-lq.mp3"; 
-    let onlineStreamAudio = new Audio();
-    onlineStreamAudio.loop = true;
-    onlineStreamAudio.crossOrigin = "anonymous";
-    onlineStreamAudio.src = STREAM_AUDIO_URL;
-
-    // Detectar Vozes em Português do Brasil com repetição para iOS/Android
-    function loadVoices() {
-      if (!('speechSynthesis' in window)) return;
-      const voices = window.speechSynthesis.getVoices();
-      if (!voices || voices.length === 0) return;
-
-      const ptVoices = voices.filter(v => v.lang.startsWith("pt") || v.lang.includes("BR") || v.lang.includes("PT"));
-      
-      bestPtVoice = ptVoices.find(v => (v.name.includes("Natural") || v.name.includes("Neural") || v.name.includes("Google") || v.name.includes("Francisca") || v.name.includes("Luciana") || v.name.includes("Daniel") || v.name.includes("Yara") || v.name.includes("Letícia")) && v.lang.includes("BR"))
-                    || ptVoices.find(v => v.lang.includes("BR"))
-                    || ptVoices[0] 
-                    || null;
-
-      const voiceInd = document.getElementById("voice-indicator");
-      if (voiceInd) {
-        if (bestPtVoice) {
-          voiceInd.innerText = "Voz: " + bestPtVoice.name.replace(/Google|Microsoft|Apple/gi, '').trim();
-        } else {
-          voiceInd.innerText = "Voz: Sistema Padrão (pt-BR)";
-        }
-      }
-    }
-
-    if ('speechSynthesis' in window) {
-      window.speechSynthesis.onvoiceschanged = loadVoices;
-      loadVoices();
-    }
-
-    // Inicializador do Sistema de Som Sintetizado (Acordes de Aleluia)
-    function initWebAudio() {
-      try {
-        const AudioClass = window.AudioContext || window.webkitAudioContext;
-        if (!audioCtx) {
-          audioCtx = new AudioClass();
-        }
-        if (audioCtx.state === 'suspended') {
-          audioCtx.resume();
-        }
-        if (!masterMusicGain) {
-          masterMusicGain = audioCtx.createGain();
-          masterMusicGain.connect(audioCtx.destination);
-        }
-      } catch (e) {
-        console.log("Web Audio não suportado, usando fallback:", e);
-      }
-    }
-
-    // Notas de Aleluia (Dó maior -> Lá menor -> Fá maior -> Sol maior)
-    const ALELUIA_HARMONY = [
-      { name: "C",  bass: 130.81, notes: [261.63, 329.63, 392.00, 523.25] },
-      { name: "Am", bass: 110.00, notes: [220.00, 261.63, 329.63, 440.00] },
-      { name: "C",  bass: 130.81, notes: [261.63, 329.63, 392.00, 523.25] },
-      { name: "Am", bass: 110.00, notes: [220.00, 261.63, 329.63, 440.00] },
-      { name: "F",  bass: 87.31,  notes: [174.61, 220.00, 261.63, 349.23] },
-      { name: "G",  bass: 98.00,  notes: [196.00, 246.94, 293.66, 392.00] },
-      { name: "C",  bass: 130.81, notes: [261.63, 329.63, 392.00, 523.25] },
-      { name: "G",  bass: 98.00,  notes: [196.00, 246.94, 293.66, 392.00] }
-    ];
-    let chordIdx = 0;
-
-    function playChordAleluia(chord) {
-      if (!audioCtx || !masterMusicGain) return;
-      const now = audioCtx.currentTime;
-
-      // Baixo grave e acolhedor
-      const oscBass = audioCtx.createOscillator();
-      const gainBass = audioCtx.createGain();
-      oscBass.type = 'triangle';
-      oscBass.frequency.setValueAtTime(chord.bass, now);
-      gainBass.gain.setValueAtTime(0.001, now);
-      gainBass.gain.linearRampToValueAtTime(0.18, now + 0.8);
-      gainBass.gain.exponentialRampToValueAtTime(0.001, now + 3.8);
-      oscBass.connect(gainBass);
-      gainBass.connect(masterMusicGain);
-      oscBass.start(now);
-      oscBass.stop(now + 4.0);
-
-      // Pad harmônico etéreo
-      chord.notes.forEach((freq, idx) => {
-        const osc = audioCtx.createOscillator();
-        const gain = audioCtx.createGain();
-        osc.type = idx % 2 === 0 ? 'sine' : 'triangle';
-        osc.frequency.setValueAtTime(freq, now);
-
-        gain.gain.setValueAtTime(0.001, now);
-        gain.gain.linearRampToValueAtTime(0.06, now + 1.2);
-        gain.gain.exponentialRampToValueAtTime(0.001, now + 4.2);
-
-        osc.connect(gain);
-        gain.connect(masterMusicGain);
-        osc.start(now + (idx * 0.15));
-        osc.stop(now + 4.5);
-      });
-    }
-
-    function startBackgroundMusic() {
-      const toggle = document.getElementById("bg-music-toggle");
-      if (toggle && !toggle.checked) return;
-
-      const userVol = parseFloat(document.getElementById("music-vol")?.value || 0.35);
-
-      // 1. Tenta reproduzir o áudio personalizado se houver
-      if (customAudioElement && customAudioElement.src) {
-        customAudioElement.volume = userVol;
-        customAudioElement.play().catch(e => console.log(e));
-        isMusicPlaying = true;
-        return;
-      }
-
-      // 2. Inicia áudio sintetizado e áudio ambiental de apoio
-      initWebAudio();
-      if (masterMusicGain && audioCtx) {
-        masterMusicGain.gain.setValueAtTime(userVol, audioCtx.currentTime);
-      }
-
-      // Tenta o stream de worship relaxante
-      try {
-        onlineStreamAudio.volume = userVol * 0.7;
-        onlineStreamAudio.play().catch(e => console.log("Stream offline, usando sintetizador:", e));
-      } catch(e){}
-
-      // Executa o arranjo harmônico de Aleluia
-      isMusicPlaying = true;
-      chordIdx = 0;
-      playChordAleluia(ALELUIA_HARMONY[0]);
-      clearInterval(musicInterval);
-      musicInterval = setInterval(() => {
-        if (!isMusicPlaying) return;
-        chordIdx = (chordIdx + 1) % ALELUIA_HARMONY.length;
-        playChordAleluia(ALELUIA_HARMONY[chordIdx]);
-      }, 3400);
-    }
-
-    function stopBackgroundMusic() {
-      isMusicPlaying = false;
-      clearInterval(musicInterval);
-      try { onlineStreamAudio.pause(); } catch(e){}
-      if (customAudioElement) {
-        try { customAudioElement.pause(); } catch(e){}
-      }
-    }
-
-    function adjustMusicVol(val) {
-      const v = parseFloat(val);
-      try { onlineStreamAudio.volume = v * 0.7; } catch(e){}
-      if (customAudioElement) {
-        try { customAudioElement.volume = v; } catch(e){}
-      }
-      if (masterMusicGain && audioCtx) {
-        masterMusicGain.gain.setValueAtTime(v, audioCtx.currentTime);
-      }
-    }
-
-    function toggleMusicOption() {
-      const toggle = document.getElementById("bg-music-toggle");
-      if (!toggle.checked && isMusicPlaying) {
-        stopBackgroundMusic();
-      } else if (toggle.checked && isSpeakingActive && !isMusicPlaying) {
-        startBackgroundMusic();
-      }
-    }
-
-    function loadCustomBackgroundAudio(event) {
-      const file = event.target.files[0];
-      if (file) {
-        if (!customAudioElement) {
-          customAudioElement = new Audio();
-          customAudioElement.loop = true;
-        }
-        customAudioElement.src = URL.createObjectURL(file);
-        const nameLabel = document.getElementById("custom-audio-name");
-        if (nameLabel) nameLabel.innerText = "Áudio: " + file.name.substring(0, 22);
-        alert("Fundo musical carregado com sucesso!");
-      }
-    }
-
-    // ========================================================
-    // FATIAMENTO DE FALA (CHUNKED SPEECH) - NUNCA TRAVA EM CELULAR
-    // ========================================================
-    function prepareChunks(prayer) {
-      const chunks = [];
-      chunks.push(prayer.title);
-      if (prayer.explicacao) {
-        prayer.explicacao.split(/[.\n]+/).forEach(s => {
-          const t = s.trim();
-          if (t.length > 2) chunks.push(t);
-        });
-      }
-      if (prayer.versiculo) {
-        chunks.push("Palavra do Senhor: " + prayer.versiculo.replace(/[“”—📖]/g, '').trim());
-      }
-      chunks.push("Vamos orar:");
-      if (prayer.oracao) {
-        prayer.oracao.split(/[.\n]+/).forEach(s => {
-          const t = s.trim();
-          if (t.length > 2) chunks.push(t);
-        });
-      }
-      if (prayer.declaracao) {
-        chunks.push("Declaração de vitória: " + prayer.declaracao.replace(/[✝\+]/g, '').trim());
-      }
-      chunks.push("Em nome de Jesus, amém.");
-      return chunks;
-    }
-
-    function speakNextChunk() {
-      if (!isSpeakingActive) return;
-      if (currentChunkIndex >= currentSpeechChunks.length) {
-        stopAudio();
-        return;
-      }
-
-      const text = currentSpeechChunks[currentChunkIndex];
-      const statusText = document.getElementById("tts-status-text");
-      if (statusText) {
-        statusText.innerText = "“" + text + "”";
-      }
-
-      const utter = new SpeechSynthesisUtterance(text);
-      utter.lang = "pt-BR";
-      if (bestPtVoice) {
-        utter.voice = bestPtVoice;
-      }
-      utter.rate = 0.88;
-      utter.pitch = 0.98;
-
-      utter.onend = () => {
-        currentChunkIndex++;
-        // Pequena pausa natural de 400ms entre as frases da oração
-        setTimeout(speakNextChunk, 380);
-      };
-
-      utter.onerror = (err) => {
-        console.log("Aviso fala:", err);
-        currentChunkIndex++;
-        setTimeout(speakNextChunk, 200);
-      };
-
-      window.speechSynthesis.speak(utter);
-    }
-
-    // Keep-alive para evitar que navegadores móveis silenciem a síntese
-    function startKeepAlive() {
-      clearInterval(speechKeepAliveTimer);
-      speechKeepAliveTimer = setInterval(() => {
-        if (window.speechSynthesis.speaking && isSpeakingActive) {
-          window.speechSynthesis.pause();
-          window.speechSynthesis.resume();
-        }
-      }, 9000);
-    }
-
-    function toggleSpeech() {
-      if (!currentPrayer) return;
-      const playBtn = document.getElementById("play-tts-btn");
-      const statusText = document.getElementById("tts-status-text");
-
-      if (isSpeakingActive) {
-        stopAudio();
-      } else {
-        // Desbloqueio IMEDIATO no clique do usuário (essencial para Safari e Chrome)
-        initWebAudio();
-        loadVoices();
-
-        if (!('speechSynthesis' in window)) {
-          alert("Seu navegador não suporta voz em áudio. Você ainda pode orar lendo o texto e ouvindo a música!");
-          startBackgroundMusic();
-          return;
-        }
-
-        // Limpa filas anteriores que poderiam travar
-        window.speechSynthesis.cancel();
-
-        isSpeakingActive = true;
-        playBtn.innerText = "⏸";
-        if (statusText) statusText.innerText = "Iniciando oração com Aleluia...";
-
-        // Inicia música de fundo imediatamente dentro do clique
-        startBackgroundMusic();
-
-        // Prepara as frases da oração e inicia a fala sequencial
-        currentSpeechChunks = prepareChunks(currentPrayer);
-        currentChunkIndex = 0;
-        startKeepAlive();
-
-        // Dá 300ms para a música entrar suavemente antes da primeira palavra
-        setTimeout(speakNextChunk, 350);
-      }
-    }
-
-    function stopAudio() {
-      isSpeakingActive = false;
-      clearInterval(speechKeepAliveTimer);
-      if ('speechSynthesis' in window) {
-        window.speechSynthesis.cancel();
-      }
-      stopBackgroundMusic();
-
-      const playBtn = document.getElementById("play-tts-btn");
-      const statusText = document.getElementById("tts-status-text");
-      if (playBtn) playBtn.innerText = "▶";
-      if (statusText) statusText.innerText = "Toque para orar ouvindo Aleluia";
-    }
-
-    // Oração do Dia
-    function setupDailyPrayer() {
-      const today = new Date().getDate();
-      const dailyIndex = (today % prayersData.length);
-      const prayer = prayersData[dailyIndex];
-      document.getElementById("daily-title").innerText = prayer.title;
-      document.getElementById("daily-verse").innerText = prayer.versiculo || prayer.declaracao || "O Senhor é o meu pastor e nada me faltará.";
-      window.currentDailyPrayer = prayer;
-    }
-
-    function openDailyPrayer() {
-      if (window.currentDailyPrayer) {
-        openPrayer(window.currentDailyPrayer, false);
-      }
-    }
-
-    function renderStats() {
-      document.getElementById("completed-count").innerText = `${completedPrayers.length} / 70`;
-    }
-
-    // Abas
-    function switchTab(tab) {
-      document.querySelectorAll(".view-section").forEach(s => s.classList.remove("active"));
-      document.querySelectorAll(".nav-btn").forEach(b => b.classList.remove("active"));
-      
-      document.getElementById(`view-${tab}`).classList.add("active");
-      const tabIndex = ['home', 'favorites', 'journal', 'settings'].indexOf(tab);
-      if (tabIndex !== -1) {
-        document.querySelectorAll(".bottom-nav .nav-btn")[tabIndex].classList.add("active");
-      }
-
-      if (tab === 'favorites') renderFavoritesList();
-    }
-
-    function renderFavoritesList() {
-      const container = document.getElementById("favorites-list-container");
-      container.innerHTML = "";
-      if (favoritePrayers.length === 0) {
-        container.innerHTML = `<p style="color:var(--text-muted);font-size:13px;text-align:center;padding:30px;">Você ainda não favoritou nenhuma oração.<br>Toque no coração dentro de qualquer oração para salvá-la aqui.</p>`;
-        return;
-      }
-      prayersData.filter(p => favoritePrayers.includes(p.id)).forEach(prayer => {
-        const card = document.createElement("div");
-        card.className = "prayer-item";
-        card.onclick = () => openPrayer(prayer, false);
-        card.innerHTML = `
-          <div class="prayer-meta">
-            <span class="prayer-num-badge">Oração #${prayer.id}</span>
-            <span style="color:var(--gold-primary);font-size:14px;">♥</span>
-          </div>
-          <div class="prayer-item-title">${prayer.title}</div>
-          <div class="prayer-item-desc">${prayer.situacao}</div>
-        `;
-        container.appendChild(card);
-      });
-    }
-
-    // Diário
-    function saveJournalEntry() {
-      const text = document.getElementById("journal-input").value.trim();
-      if (!text) return;
-      const history = JSON.parse(localStorage.getItem("journal_history") || "[]");
-      history.unshift({
-        date: new Date().toLocaleDateString('pt-BR', { day: '2-digit', month: 'short', year: 'numeric' }),
-        text: text
-      });
-      localStorage.setItem("journal_history", JSON.stringify(history));
-      document.getElementById("journal-input").value = "";
-      renderJournalHistory();
-      alert("Anotação salva no seu diário com sucesso!");
-    }
-
-    function renderJournalHistory() {
-      const history = JSON.parse(localStorage.getItem("journal_history") || "[]");
-      const container = document.getElementById("journal-history");
-      container.innerHTML = "";
-      if (history.length === 0) {
-        container.innerHTML = `<p style="font-size:12px;color:var(--text-muted);">Nenhuma anotação registrada ainda.</p>`;
-        return;
-      }
-      history.forEach(item => {
-        const div = document.createElement("div");
-        div.className = "block-card";
-        div.innerHTML = `
-          <div style="font-size:11px;color:var(--gold-primary);font-weight:700;margin-bottom:6px;">📅 ${item.date}</div>
-          <div style="font-size:13px;color:#e2e8f0;line-height:1.5;">${item.text}</div>
-        `;
-        container.appendChild(div);
-      });
-    }
-
-    // Paywall & Assinatura
-    function openPaywall() {
-      document.getElementById("paywall-modal").classList.add("open");
-    }
-
-    function closePaywall() {
-      document.getElementById("paywall-modal").classList.remove("open");
-    }
-
-    function redirectToCheckout() {
-      // Redireciona o cliente para seu checkout de assinatura mensal
-      window.open(CHECKOUT_URL, "_blank");
-    }
-
-    function openActivationPrompt() {
-      const code = prompt("Digite seu código de ativação ou e-mail de compra:");
-      if (code && code.trim().length > 2) {
-        isSubscribed = true;
-        localStorage.setItem("app_subscribed", "true");
-        updateSubscriptionUI();
-        renderPrayersList();
-        closePaywall();
-        alert("🎉 Parabéns! Sua assinatura VIP foi ativada com sucesso. Todas as 70 orações estão liberadas!");
-      }
-    }
-
-    function activateSubscription() {
-      const input = document.getElementById("activation-code").value.trim();
-      if (input.length > 2) {
-        isSubscribed = true;
-        localStorage.setItem("app_subscribed", "true");
-        updateSubscriptionUI();
-        renderPrayersList();
-        alert("🎉 Assinatura ativada com sucesso!");
-      } else {
-        alert("Por favor, digite um código ou e-mail válido.");
-      }
-    }
-
-    function changeFontSize(size) {
-      document.getElementById("modal-oracao").style.fontSize = size;
-      document.querySelectorAll("#view-settings .cat-pill").forEach(btn => {
-        btn.classList.toggle("active", btn.innerText.includes(size === '14px' ? 'Pequeno' : (size === '16px' ? 'Médio' : 'Grande')));
-      });
-    }
-  </script>
-</body>
-</html>
+  <header>
+    <h1>70 Orações Poderosas</h1>
+    <p>Comunhão Diária com Deus</p>
+    <div id="statusBadge" class="badge-status badge-free">Degustação: 7 Orações Liberadas</div>
+  </header>
+
+  <!-- Filtro de Categorias -->
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="filtrar('todas')">Todas (70)</button>
+    <button class="filter-btn" onclick="filtrar('Gratidão e Manhã')">Manhã & Gratidão</button>
+    <button class="filter-btn" onclick="filtrar('Proteção e Batalha')">Proteção & Batalha</
