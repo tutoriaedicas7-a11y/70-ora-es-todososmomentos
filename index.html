@@ -5,30 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>70 Orações Poderosas — Comunhão Diária com Deus</title>
 
-  <!-- Tags para miniatura e texto no WhatsApp / Redes Sociais -->
+  <!-- Metatags para compartilhamento com imagem e texto no WhatsApp -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="70 Orações Poderosas — Comunhão Diária com Deus" />
-  <meta property="og:description" content="Ouça orações diárias com narração em voz serena e fundo devocional. Experimente grátis!" />
+  <meta property="og:description" content="Ouça orações guiadas com narração em voz serena, fundo de adoração e deixe seu pedido de oração." />
   <meta property="og:image" content="https://images.unsplash.com/photo-1507692049790-de58290a4334?w=1200&auto=format&fit=crop&q=80" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:url" content="https://tutoriaedicas7-a11y.github.io/70-ora-es-todososmomentos/" />
-  <meta name="theme-color" content="#0b0f19" />
+  <meta name="theme-color" content="#060913" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg: #0b0f19;
-      --card-bg: rgba(26, 32, 53, 0.9);
-      --card-border: rgba(212, 175, 55, 0.25);
+      --bg: #060913;
+      --card-bg: rgba(18, 24, 43, 0.92);
+      --card-border: rgba(212, 175, 55, 0.28);
       --gold-primary: #d4af37;
-      --gold-light: #fef3c7;
+      --gold-gradient: linear-gradient(135deg, #fef08a 0%, #d4af37 50%, #996515 100%);
       --text-main: #f8fafc;
       --text-muted: #94a3b8;
-      --accent-blue: #38bdf8;
+      --accent-green: #10b981;
     }
 
     * {
@@ -40,55 +40,117 @@
 
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      background: radial-gradient(circle at top, #1e1b4b 0%, #0b0f19 100%);
+      background: radial-gradient(circle at 50% 0%, #1e1b4b 0%, #090d1a 50%, #030712 100%);
       background-attachment: fixed;
       color: var(--text-main);
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      padding-bottom: 85px;
-      overflow-x: hidden;
+      padding-bottom: 90px;
     }
 
-    header {
-      padding: 22px 16px 14px;
+    /* Topo Devocional Imersivo (Carômetro) */
+    .hero-banner {
+      background: linear-gradient(180deg, rgba(30, 27, 75, 0.85) 0%, rgba(9, 13, 26, 0.95) 100%);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+      padding: 24px 18px 20px;
       text-align: center;
-      background: rgba(11, 15, 25, 0.92);
-      backdrop-filter: blur(12px);
-      position: sticky;
-      top: 0;
-      z-index: 40;
-      border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+      position: relative;
+      overflow: hidden;
     }
 
-    header h1 {
-      font-family: 'Cinzel', serif;
-      font-size: 1.35rem;
+    .hero-banner::before {
+      content: "";
+      position: absolute;
+      top: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 260px;
+      height: 120px;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.25) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .sacred-emblem {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(212, 175, 55, 0.12);
+      border: 1px solid rgba(212, 175, 55, 0.5);
       color: var(--gold-primary);
-      letter-spacing: 0.5px;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+    }
+
+    .hero-banner h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.45rem;
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 0.8px;
       margin-bottom: 4px;
     }
 
-    header p {
-      font-size: 0.82rem;
+    .hero-banner p {
+      font-size: 0.85rem;
       color: var(--text-muted);
+      max-width: 420px;
+      margin: 0 auto;
     }
 
-    .badge-status {
+    /* Estatísticas Devocionais */
+    .community-stats {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 14px;
+    }
+
+    .stat-pill {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 4px 12px;
+      padding: 5px 12px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 0.74rem;
+      color: #cbd5e1;
+    }
+
+    .stat-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 8px #22c55e;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 0.5; transform: scale(0.9); }
+      50% { opacity: 1; transform: scale(1.2); }
+      100% { opacity: 0.5; transform: scale(0.9); }
+    }
+
+    .badge-status {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 4px 14px;
       border-radius: 999px;
       font-size: 0.75rem;
-      font-weight: 600;
-      margin-top: 8px;
+      font-weight: 700;
     }
 
     .badge-free {
-      background: rgba(148, 163, 184, 0.15);
-      color: #cbd5e1;
-      border: 1px solid rgba(148, 163, 184, 0.3);
+      background: rgba(16, 185, 129, 0.15);
+      color: #6ee7b7;
+      border: 1px solid rgba(16, 185, 129, 0.4);
     }
 
     .badge-vip {
@@ -113,7 +175,7 @@
       display: block;
     }
 
-    /* Cards de Oração */
+    /* Cards de Orações */
     .prayer-card {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
@@ -140,8 +202,8 @@
     }
 
     .card-number {
-      width: 36px;
-      height: 36px;
+      width: 38px;
+      height: 38px;
       border-radius: 10px;
       background: rgba(212, 175, 55, 0.12);
       color: var(--gold-primary);
@@ -149,8 +211,9 @@
       align-items: center;
       justify-content: center;
       font-weight: 700;
-      font-size: 0.88rem;
+      font-size: 0.9rem;
       flex-shrink: 0;
+      border: 1px solid rgba(212, 175, 55, 0.3);
     }
 
     .card-info {
@@ -159,10 +222,10 @@
     }
 
     .card-info h3 {
-      font-size: 0.95rem;
+      font-size: 0.96rem;
       font-weight: 600;
       color: #fff;
-      margin-bottom: 2px;
+      margin-bottom: 3px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -175,28 +238,140 @@
 
     .card-tag {
       font-size: 0.72rem;
-      font-weight: 600;
-      padding: 4px 10px;
-      border-radius: 6px;
+      font-weight: 700;
+      padding: 5px 11px;
+      border-radius: 8px;
       flex-shrink: 0;
     }
 
     .tag-free {
-      background: rgba(34, 197, 94, 0.15);
-      color: #4ade80;
+      background: rgba(16, 185, 129, 0.18);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.3);
     }
 
     .tag-vip {
-      background: rgba(234, 179, 8, 0.18);
+      background: rgba(234, 179, 8, 0.2);
       color: #fde047;
       border: 1px solid rgba(234, 179, 8, 0.4);
     }
 
-    /* Modal de Oração */
+    /* Mural de Pedidos de Oração */
+    .petition-box {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 20px 18px;
+      margin-bottom: 20px;
+    }
+
+    .petition-box h2 {
+      font-family: 'Cinzel', serif;
+      color: var(--gold-primary);
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+
+    .petition-box p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+
+    .input-field, .textarea-field {
+      width: 100%;
+      background: rgba(6, 9, 19, 0.8);
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      border-radius: 10px;
+      color: #fff;
+      font-size: 0.95rem;
+      padding: 12px 14px;
+      margin-bottom: 12px;
+      outline: none;
+    }
+
+    .textarea-field {
+      min-height: 90px;
+      resize: vertical;
+    }
+
+    .btn-submit-petition {
+      width: 100%;
+      background: var(--gold-gradient);
+      color: #060913;
+      border: none;
+      padding: 13px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .prayer-item {
+      background: rgba(18, 24, 43, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 14px;
+      margin-bottom: 10px;
+    }
+
+    .prayer-item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+
+    .prayer-item-name {
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: #fde047;
+    }
+
+    .prayer-item-tag {
+      font-size: 0.7rem;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 2px 8px;
+      border-radius: 4px;
+      color: #94a3b8;
+    }
+
+    .prayer-item-body {
+      font-size: 0.88rem;
+      color: #e2e8f0;
+      line-height: 1.45;
+      margin-bottom: 10px;
+    }
+
+    .prayer-item-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.78rem;
+    }
+
+    .btn-pray-together {
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      color: #6ee7b7;
+      padding: 5px 12px;
+      border-radius: 20px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* Modal de Leitura / Oração */
     .modal {
       position: fixed;
       inset: 0;
-      background: rgba(7, 10, 19, 0.92);
+      background: rgba(5, 8, 17, 0.93);
       backdrop-filter: blur(10px);
       z-index: 100;
       display: none;
@@ -215,12 +390,12 @@
       align-items: center;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
       padding-bottom: 12px;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
 
     .modal-header h2 {
       font-family: 'Cinzel', serif;
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       color: var(--gold-primary);
       max-width: 85%;
     }
@@ -238,14 +413,14 @@
       flex: 1;
       overflow-y: auto;
       padding: 10px 4px;
-      font-size: 1.1rem;
+      font-size: 1.12rem;
       line-height: 1.85;
       color: #f1f5f9;
       text-align: justify;
     }
 
     .modal-footer {
-      background: rgba(26, 32, 53, 0.95);
+      background: rgba(22, 29, 53, 0.95);
       border: 1px solid var(--card-border);
       border-radius: 16px;
       padding: 14px 18px;
@@ -257,19 +432,20 @@
     }
 
     .btn-play {
-      background: var(--gold-primary);
+      background: var(--gold-gradient);
       border: none;
-      color: #0b0f19;
-      width: 46px;
-      height: 46px;
+      color: #060913;
+      width: 48px;
+      height: 48px;
       border-radius: 50%;
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: bold;
       flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
     }
 
     .audio-text {
@@ -279,7 +455,7 @@
     .audio-text b {
       display: block;
       color: #fff;
-      font-size: 0.88rem;
+      font-size: 0.9rem;
     }
 
     .audio-text span {
@@ -287,11 +463,11 @@
       color: var(--text-muted);
     }
 
-    /* Modal Paywall / Bloqueio */
+    /* Modal Paywall */
     .paywall-modal {
       position: fixed;
       inset: 0;
-      background: rgba(11, 15, 25, 0.95);
+      background: rgba(5, 8, 17, 0.96);
       backdrop-filter: blur(8px);
       z-index: 110;
       display: none;
@@ -305,7 +481,7 @@
     }
 
     .paywall-card {
-      background: radial-gradient(circle at top, #241442 0%, #13172c 100%);
+      background: radial-gradient(circle at top, #26164d 0%, #111528 100%);
       border: 2px solid var(--gold-primary);
       border-radius: 20px;
       padding: 28px 20px;
@@ -330,10 +506,11 @@
     }
 
     .price-box {
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(0, 0, 0, 0.45);
       border-radius: 12px;
       padding: 12px;
       margin-bottom: 18px;
+      border: 1px solid rgba(212, 175, 55, 0.2);
     }
 
     .price-box span {
@@ -350,8 +527,8 @@
     .btn-buy {
       display: block;
       width: 100%;
-      background: linear-gradient(135deg, #eab308 0%, #ca8a04 100%);
-      color: #0b0f19;
+      background: var(--gold-gradient);
+      color: #060913;
       font-weight: 700;
       text-decoration: none;
       padding: 14px;
@@ -359,7 +536,7 @@
       font-size: 1rem;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-      box-shadow: 0 4px 15px rgba(234, 179, 8, 0.35);
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.35);
       margin-bottom: 12px;
     }
 
@@ -383,8 +560,9 @@
     }
 
     .settings-panel h3 {
+      font-family: 'Cinzel', serif;
       color: var(--gold-primary);
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       margin-bottom: 8px;
     }
 
@@ -398,7 +576,7 @@
     .input-key {
       width: 100%;
       padding: 14px;
-      background: rgba(11, 15, 25, 0.8);
+      background: rgba(6, 9, 19, 0.8);
       border: 1px solid rgba(212, 175, 55, 0.4);
       border-radius: 10px;
       color: #fff;
@@ -406,13 +584,13 @@
       text-transform: uppercase;
       margin-bottom: 12px;
       text-align: center;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
     }
 
     .btn-submit {
       width: 100%;
-      background: var(--gold-primary);
-      color: #0b0f19;
+      background: var(--gold-gradient);
+      color: #060913;
       border: none;
       padding: 14px;
       border-radius: 10px;
@@ -421,16 +599,16 @@
       cursor: pointer;
     }
 
-    /* Barra de Navegação Inferior */
+    /* Barra de Navegação Inferior com 3 Abas */
     nav.bottom-nav {
       position: fixed;
       bottom: 0;
       left: 0;
       right: 0;
-      height: 68px;
-      background: rgba(11, 15, 25, 0.95);
-      backdrop-filter: blur(12px);
-      border-top: 1px solid rgba(212, 175, 55, 0.2);
+      height: 70px;
+      background: rgba(6, 9, 19, 0.96);
+      backdrop-filter: blur(14px);
+      border-top: 1px solid rgba(212, 175, 55, 0.25);
       display: flex;
       justify-content: space-around;
       align-items: center;
@@ -447,7 +625,7 @@
       cursor: pointer;
       background: none;
       border: none;
-      padding: 6px 16px;
+      padding: 6px 12px;
     }
 
     .nav-item.active {
@@ -464,9 +642,22 @@
 </head>
 <body>
 
-  <header>
+  <!-- Topo Devocional (Carômetro) -->
+  <header class="hero-banner">
+    <div class="sacred-emblem">✝</div>
     <h1>70 Orações Poderosas</h1>
-    <p>Comunhão Diária com Deus</p>
+    <p>Comunhão Diária com Deus &bull; Narração e Paz Espiritual</p>
+    
+    <div class="community-stats">
+      <div class="stat-pill">
+        <span class="stat-dot"></span>
+        <span>1.482 em oração hoje</span>
+      </div>
+      <div class="stat-pill">
+        <span>📖 70 Orações</span>
+      </div>
+    </div>
+
     <div id="statusBadge" class="badge-status badge-free">Degustação: 7 Orações Liberadas</div>
   </header>
 
@@ -476,24 +667,51 @@
       <div id="oracoesList"></div>
     </div>
 
-    <!-- Vista 2: Aba Ajustes e Chave VIP -->
+    <!-- Vista 2: Mural de Pedidos de Oração -->
+    <div id="tabPetitions" class="tab-view">
+      <div class="petition-box">
+        <h2>🙏 Mural de Intercessão</h2>
+        <p>Deposite aqui a sua intenção de oração. Nós e a comunidade oramos juntos pela sua causa.</p>
+        
+        <input type="text" id="petName" class="input-field" placeholder="Seu nome (ou 'Anônimo')" />
+        <select id="petCategory" class="input-field">
+          <option value="Família e Filhos">Família e Filhos</option>
+          <option value="Cura e Saúde">Cura e Saúde</option>
+          <option value="Causas Financeiras / Emprego">Causas Financeiras / Emprego</option>
+          <option value="Paz Interior e Ansiedade">Paz Interior e Ansiedade</option>
+          <option value="Proteção Espiritual">Proteção Espiritual</option>
+        </select>
+        <textarea id="petReason" class="textarea-field" placeholder="Descreva brevemente o seu motivo de oração..."></textarea>
+        
+        <button class="btn-submit-petition" onclick="publicarPedido()">
+          <span>🕊️</span> Registrar Pedido no Mural
+        </button>
+      </div>
+
+      <h3 style="font-family: 'Cinzel', serif; color: var(--gold-primary); font-size: 1.05rem; margin-bottom: 12px;">
+        Intenções Recentes para Intercessão
+      </h3>
+      <div id="petitionsList"></div>
+    </div>
+
+    <!-- Vista 3: Ajustes e Chave VIP -->
     <div id="tabSettings" class="tab-view">
       <div class="settings-panel">
         <h3>🔑 Desbloquear Acesso Completo</h3>
-        <p>Se você assinou pela Kiwify, insira abaixo a sua <b>Chave VIP</b> recebida para liberar todas as 70 orações com narração contínua:</p>
-        <input type="text" id="vipKeyInput" class="input-key" placeholder="DIGITE SUA CHAVE VIP (EX: ORACAO2026)" />
+        <p>Se você já é assinante pela Kiwify, insira a sua <b>Chave VIP de Acesso</b> recebida por e-mail para liberar as 70 orações:</p>
+        <input type="text" id="vipKeyInput" class="input-key" placeholder="DIGITE SUA CHAVE VIP" />
         <button class="btn-submit" onclick="validarChaveManual()">Ativar Acesso VIP</button>
       </div>
 
       <div class="settings-panel" style="text-align: center;">
         <h3>Ainda não é assinante?</h3>
-        <p>Acesse todas as 70 orações diárias narradas com fundo musical por apenas <b>R$ 19,90/mês</b>.</p>
+        <p>Ouça todas as 70 orações com narração suave contínua e fundo instrumental de adoração por apenas <b>R$ 19,90/mês</b>.</p>
         <a href="https://pay.kiwify.com.br/ONEdsD6" target="_blank" class="btn-buy" style="margin-bottom: 0;">Quero Assinar Agora</a>
       </div>
     </div>
   </div>
 
-  <!-- Modal de Leitura / Oração -->
+  <!-- Modal de Oração / Player -->
   <div class="modal" id="oracaoModal">
     <div class="modal-header">
       <h2 id="modalTitulo">Oração</h2>
@@ -501,7 +719,7 @@
     </div>
     <div class="modal-body" id="modalTexto"></div>
     <div class="modal-footer">
-      <div class="audio-controls" style="display: flex; align-items: center; gap: 12px; flex: 1;">
+      <div style="display: flex; align-items: center; gap: 12px; flex: 1;">
         <button class="btn-play" id="btnPlayAudio" onclick="alternarAudio()">▶</button>
         <div class="audio-text">
           <b id="audioLabel">Ouvir Narração</b>
@@ -537,6 +755,10 @@
     <button class="nav-item active" id="navPrayersBtn" onclick="trocarAba('prayers')">
       <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
       Orações
+    </button>
+    <button class="nav-item" id="navPetitionsBtn" onclick="trocarAba('petitions')">
+      <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+      Mural de Oração
     </button>
     <button class="nav-item" id="navSettingsBtn" onclick="trocarAba('settings')">
       <svg viewBox="0 0 24 24"><path d="M12.65 10C11.83 7.67 9.61 6 7 6c-3.31 0-6 2.69-6 6s2.69 6 6 6c2.61 0 4.83-1.67 5.65-4H17v4h4v-4h2v-4H12.65zM7 14c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></svg>
@@ -679,6 +901,10 @@
       if (aba === 'prayers') {
         document.getElementById("tabPrayers").classList.add("active");
         document.getElementById("navPrayersBtn").classList.add("active");
+      } else if (aba === 'petitions') {
+        document.getElementById("tabPetitions").classList.add("active");
+        document.getElementById("navPetitionsBtn").classList.add("active");
+        renderizarPedidos();
       } else {
         document.getElementById("tabSettings").classList.add("active");
         document.getElementById("navSettingsBtn").classList.add("active");
@@ -695,8 +921,77 @@
         renderizarLista();
         trocarAba('prayers');
       } else {
-        alert("Chave inválida. Certifique-se de digitar ORACAO2026 exatamente como informado.");
+        alert("Chave inválida. Verifique o código recebido no seu e-mail de compra.");
       }
+    }
+
+    // Gerenciador do Mural de Pedidos
+    const PEDIDOS_PADRAO = [
+      { nome: "Maria Clara", categoria: "Família e Filhos", motivo: "Peço oração pela restauração do meu casamento e paz entre meus filhos.", orações: 14 },
+      { nome: "Antônio Santos", categoria: "Cura e Saúde", motivo: "Peço a Deus que restaure a saúde da minha mãe que fará exames nesta semana.", orações: 28 },
+      { nome: "Irmão em Cristo", categoria: "Causas Financeiras / Emprego", motivo: "Orando por uma porta de emprego aberta e direcionamento profissional.", orações: 19 }
+    ];
+
+    function obterPedidos() {
+      const salvos = localStorage.getItem("oracoes_mural_pedidos");
+      return salvos ? JSON.parse(salvos) : PEDIDOS_PADRAO;
+    }
+
+    function renderizarPedidos() {
+      const lista = document.getElementById("petitionsList");
+      const pedidos = obterPedidos();
+      lista.innerHTML = "";
+
+      pedidos.forEach((p, idx) => {
+        const item = document.createElement("div");
+        item.className = "prayer-item";
+        item.innerHTML = `
+          <div class="prayer-item-header">
+            <span class="prayer-item-name">${p.nome}</span>
+            <span class="prayer-item-tag">${p.categoria}</span>
+          </div>
+          <div class="prayer-item-body">"${p.motivo}"</div>
+          <div class="prayer-item-footer">
+            <span style="color: #94a3b8;">🙏 ${p.orações} pessoas já oraram</span>
+            <button class="btn-pray-together" onclick="interceder(${idx})">
+              <span>✝️</span> Orar por Esta Causa
+            </button>
+          </div>
+        `;
+        lista.appendChild(item);
+      });
+    }
+
+    function publicarPedido() {
+      const nomeInput = document.getElementById("petName").value.trim() || "Anônimo";
+      const catInput = document.getElementById("petCategory").value;
+      const motivoInput = document.getElementById("petReason").value.trim();
+
+      if (!motivoInput) {
+        alert("Por favor, digite o motivo da sua oração.");
+        return;
+      }
+
+      const pedidos = obterPedidos();
+      pedidos.unshift({
+        nome: nomeInput,
+        categoria: catInput,
+        motivo: motivoInput,
+        orações: 1
+      });
+
+      localStorage.setItem("oracoes_mural_pedidos", JSON.stringify(pedidos));
+      document.getElementById("petReason").value = "";
+      alert("Seu pedido de oração foi registrado no mural de intercessão com sucesso!");
+      renderizarPedidos();
+    }
+
+    function interceder(idx) {
+      const pedidos = obterPedidos();
+      pedidos[idx].orações += 1;
+      localStorage.setItem("oracoes_mural_pedidos", JSON.stringify(pedidos));
+      renderizarPedidos();
+      alert("Você se uniu em intercessão por este irmão! Deus abençoe a sua fé.");
     }
 
     renderizarLista();
